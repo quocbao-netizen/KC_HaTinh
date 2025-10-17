@@ -1,0 +1,116 @@
+section.section-about(class="section-py overflow-hidden relative after:content-[''] after:block after:absolute after:inset-0 after:backdrop-blur-sm after:z-1 after:xl:hidden")
+    .container 
+        .block-about(class="flex flex-col items-start gap-base relative z-2")
+            .block-content(class="w-6/12 -lg:w-full")
+                h2.about-title(class="title-40 text-primary-1 font-bold") Về KC Hà Tĩnh
+                p.about-desc(class="text-xl leading-[1.4] line-clamp-5") Trải qua chặng đường gần 15 năm gắn bó và đồng hành cùng ngành nông nghiệp tỉnh Hà Tĩnh, Công ty KC Hà Tĩnh đã ghi dấu ấn và trở thành một trong những doanh nghiệp tiêu biểu, tiên phong trong xây dựng chuỗi giá trị nông sản và nền nông nghiệp xanh tại Hà Tĩnh.
+            ul.list-stats(class="grid grid-cols-4 -lg:grid-cols-2 -lg:w-full gap-base")
+                li.stats-item
+                    .stats-title(class="title-72 text-primary-1 font-bold pb-4 border-b border-utility-100") 15+
+                    .stats-content(class="pt-4 text-xl line-clamp-2") Năm hoạt động
+                li.stats-item
+                    .stats-title(class="title-72 text-primary-1 font-bold pb-4 border-b border-utility-100") 40+ 
+                    .stats-content(class="pt-4 text-xl line-clamp-2") Nước có giao dịch ngoại thương
+                li.stats-item
+                    .stats-title(class="title-72 text-primary-1 font-bold pb-4 border-b border-utility-100") 2000+
+                    .stats-content(class="pt-4 text-xl line-clamp-2") Khách hàng
+                li.stats-item
+                    .stats-title(class="title-72 text-primary-1 font-bold pb-4 border-b border-utility-100") 1000+
+                    .stats-content(class="pt-4 text-xl line-clamp-2") Sản phẩm
+            +BtnPrimary("Giới thiệu")
+    .about-bg-snow(class="absolute bottom-0 left-0 z-1 w-full rem:h-[calc(359px*var(--size-bg-icon))] bg-[url('../img/bg-icon/about-bg-snow.svg')] bg-no-repeat bg-bottom bg-cover")
+    .about-bg-pine-tree(class="absolute rem:bottom-[-42px] rem:left-[-19px] z-1 rem:w-[calc(316px*var(--size-bg-icon))] rem:h-[calc(282px*var(--size-bg-icon))] bg-[url('../img/bg-icon/about-bg-pine-tree.svg')] bg-no-repeat bg-bottom bg-cover")
+    .about-bg-bell(class="absolute rem:top-[-30px] rem:left-[-3px] z-1 rem:w-[calc(210px*var(--size-bg-icon))] rem:h-[calc(538px*var(--size-bg-icon))] bg-[url('../img/bg-icon/about-bg-bell.svg')] bg-no-repeat bg-bottom bg-cover")
+    .about-bg-giraffe(class="absolute bottom-0 rem:right-[-250px] z-1 rem:w-[calc(629px*var(--size-bg-icon))] rem:h-[calc(559px*var(--size-bg-icon))] bg-[url('../img/bg-icon/about-bg-giraffe.svg')] bg-no-repeat bg-bottom bg-cover")
+section.section-featured-products(class="section-py !pt-30 bg-utility-50 relative overflow-hidden")
+    .container
+        .featured(class="flex flex-col gap-base relative z-2")
+            .featured-top(class="flex-between flex-wrap gap-base")
+                h2.featured-tile(class="title-36 text-primary-1 font-bold ") Sản phẩm nổi bật
+                +BtnPrimary("Xem tất cả")
+            +MenuSection(["Tất cả","Gạo Ngọc Mầm","Điện mặt trời","Phân bón - Thuốc BVTV","TAGS - Thuốc thú y","Nông sản, lương thực - Giống cây trồng","Máy nông nghiệp - Nông cụ"])
+            .swiper-column-auto(class="auto-4-column relative ")
+                .swiper 
+                    .swiper-wrapper(class="!flex-nowrap w-auto")
+                        -for(let i=0; i<7;i++)
+                            .swiper-slide
+                                +ProductItem()
+                .wrap-button-slide.in-static
+                    +BtnSlide('prev')(class="btn-prev")
+                    +BtnSlide('next')(class="btn-next")
+    .featuredPrd-bg-pine-wire(class="absolute top-0 left-0 right-0 z-1 w-full rem:h-[calc(102px*var(--size-bg-icon))] bg-[url('../img/bg-icon/featuredPrd-bg-pine-wire.svg')] bg-no-repeat bg-bottom bg-cover")
+    .featuredPrd-bg-star-array-1(class="absolute bottom-0 rem:left-[-30px] z-1 rem:w-[calc(196px*var(--size-bg-icon))] rem:h-[calc(432px*var(--size-bg-icon))] bg-[url('../img/bg-icon/featuredPrd-bg-star-array-1.svg')] bg-no-repeat bg-bottom bg-cover")
+    .featuredPrd-bg-star-array-2(class="absolute top-0 rem:right-[-10px] z-1 rem:w-[calc(196px*var(--size-bg-icon))] rem:h-[calc(432px*var(--size-bg-icon))] bg-[url('../img/bg-icon/featuredPrd-bg-star-array-2.svg')] bg-no-repeat bg-bottom bg-cover")
+section.section-service(class="bg-[url('../img/bg-icon/service-bg-snow-falling.svg')] bg-no-repeat bg-bottom bg-cover relative overflow-hidden")
+    .service(class="flex -xl:flex-col")
+        .service-content(class="text-white relative xl:rem:pl-[260px] xl:rem:pr-[72px] -xl:p-[20px_15px] xl:rem:pt-[185px] shrink-0 grow-0 basis-[calc((620/1920)*100%)] z-2")
+            h2.service-content-title(class="title-40 font-bold leading-[1.25]") Dịch vụ của chúng tôi
+            p.service-content-desc(class="mt-6.5 text-xl leading-[1.4]") Ngày nay, Công ty chúng tôi trở thành nhà phân phối chính thức của nhiều nhà máy và tập đoàn lớn trên Toàn Quốc, trở thành một địa chỉ uy tín đối với bạn hàng, tin cậy của đối tác và là nơi gửi gắm niềm tin của người tiêu dùng.
+        .block-service(class="relative z-2 flex-[0_0_100%] xl:flex-[0_0_calc((1300/1920)*100%)]")
+            .swiper-column-auto
+                .swiper 
+                    .swiper-wrapper 
+                        -for(let i=0;i<6;i++)
+                            .swiper-slide(class="!mr-0 !w-[calc(100%/1.61)] md:!w-[calc(100%/2.61)] lg:!w-[calc(100%/3.61)] relative group")
+                                .service-thumb(class="img-ratio ratio:pt-[810_360]")
+                                    +PugImg('./img/service/service-1.svg')(class="transition-500 group-hover:scale-105")
+                                .services-info(class="absolute bottom-0 left-0 flex flex-col justify-end items-start gap-y-5 w-full h-[40%] py-10 px-8 bg-[linear-gradient(to_bottom,rgba(0,79,43,0),#004F2B)]")
+                                    .title(class="text-2xl text-white font-bold ") Vận tải
+                                    +BtnPrimary("Khám phá thêm")
+    .service-bg-home-snow(class="absolute rem:bottom-[-236px] rem:left-[-63px] z-1 rem:w-[calc(880px*var(--size-bg-icon))] rem:h-[calc(596px*var(--size-bg-icon))] bg-[url('../img/bg-icon/service-bg-home-snow.svg')] bg-no-repeat bg-bottom bg-cover")
+section.section-news(class="section-py relative overflow-hidden bg-utility-50")
+    .container
+        .news(class="flex flex-col gap-base relative z-2")
+            .news-top(class="flex-between flex-wrap gap-base")
+                h2.featured-tile(class="title-40 text-primary-1 font-bold ") Sản phẩm nổi bật
+                +BtnPrimary("Xem tất cả")
+            .menu-news 
+                +MenuSection(["Tin mới","Tin hoạt động & Sự kiện","Tin tức thị trường","Tư vấn tiêu dùng","Tuyển dụng","Media & Communication"])
+            .block-news 
+                .swiper-column-auto(class="auto-3-column relative")
+                    .swiper 
+                        .swiper-wrapper(class="!flex-nowrap w-auto")
+                            -for(let i=0; i<7;i++)
+                                .swiper-slide
+                                    +NewsItem()
+                    .wrap-button-slide.in-static
+                        +BtnSlide('prev')(class="btn-prev")
+                        +BtnSlide('next')(class="btn-next")
+    .news-bg-gift-1(class="absolute -xl:hidden top-17.5 left-0 z-1 rem:w-[calc(184px*var(--size-bg-icon))] rem:h-[calc(356px*var(--size-bg-icon))] bg-[url('../img/bg-icon/news-bg-gift-1.svg')] bg-no-repeat bg-bottom bg-cover")
+    .news-bg-gift-2(class="absolute -xl:hidden bottom-0 right-0 z-1 rem:w-[calc(184px*var(--size-bg-icon))] rem:h-[calc(356px*var(--size-bg-icon))] bg-[url('../img/bg-icon/news-bg-gift-2.svg')] bg-no-repeat bg-bottom bg-cover")
+    .news-bg-snow-1(class="absolute bottom-25 left-10 z-1 rem:w-[calc(105px*var(--size-bg-icon))] rem:h-[calc(141px*var(--size-bg-icon))] bg-[url('../img/bg-icon/news-bg-snow-1.svg')] bg-no-repeat bg-bottom bg-cover")
+    .news-bg-snow-2(class="absolute top-17.5 right-17.5 z-1 rem:w-[calc(118px*var(--size-bg-icon))] rem:h-[calc(206px*var(--size-bg-icon))] bg-[url('../img/bg-icon/news-bg-snow-2.svg')] bg-no-repeat bg-bottom bg-cover")
+section.section-presence(class="pt-30 pb-7.5 relative overflow-hidden")
+    .presence(class="flex relative z-2 -xl:flex-col -xl:px-[15px]")
+        .presence-nation(class="xl:rem:pl-[260px] xl:pr-2.5 xl:flex-[0_0_calc((690/1920)*100%)] -xl:w-full")
+            h2.presence-nation-title(class="title-40 text-primary-1 font-bold pb-3") Sự hiện diện toàn cầu
+            ul.presence-nation-list(class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-2 gap-x-5 gap-y-4 pt-4 border-t border-primary-1 ")
+                -for(let i=0;i<13;i++)
+                    li.item(class="flex-y-center gap-x-3 py-1.75")
+                        .presence-nation-img
+                            +PugImg('./img/presence-nation/presence-nation-1.svg')(class="w-10 rem:h-[26px]")
+                        span.content(class="text-lg capitalize") Lào
+        .presence-block-map(class="xl:flex-[0_0_calc((1230/1920)*100%)] -xl:w-full xl:rem:pr-[92px]")
+            .presence-map(class="img-full") 
+                +PugImg('./img/map.svg')
+    .presence-bg-christmas-tree(class="absolute -sm:hidden rem:bottom-[-132px] left-0 z-1 rem:w-[calc(278px*var(--size-bg-icon))] rem:h-[calc(704px*var(--size-bg-icon))] bg-[url('../img/bg-icon/presence-bg-christmas-tree.svg')] bg-no-repeat bg-bottom bg-cover")
+section.section-partner(class="section-py bg-utility-50 relative overflow-hidden")
+    .container 
+        .partner-list(class="relative z-2")
+            .swiper-column-auto(class="auto-6-column relative")
+                .swiper 
+                    .swiper-wrapper(class="")
+                        -for(let i=0;i<8;i++)
+                            .swiper-slide(class="group")
+                                .partner-thumb(class="img-ratio ratio:pt-[120_200] border border-transparent transition-500 group-hover:hover:border-primary-1")
+                                    +PugImg('./img/partner-1.svg')
+                                .partner-info(class="pt-4 text-center text-lg leading-[1.4] text-utility-950 transition-500 group-hover:text-primary-1 line-clamp-2") Bộ Nông nghiệp và Phát triển nông thôn
+                .wrap-button-slide.in-static
+                    +BtnSlide('prev')(class="btn-prev xl:!translate-y-0 xl:!top-10")
+                    +BtnSlide('next')(class="btn-next xl:!translate-y-0 xl:!top-10")
+    .partner-bg-christmas-tree(class="absolute -xl:hidden rem:bottom-[-72px] rem:left-[-56px] z-1 rem:w-[calc(316px*var(--size-bg-icon))] rem:h-[calc(282px*var(--size-bg-icon))] bg-[url('../img/bg-icon/partner-bg-christmas-tree.svg')] bg-no-repeat bg-bottom bg-cover")
+    .partner-bg-santa-claus-gifts(class="absolute -xl:hidden rem:bottom-[29px] right-3 z-1 rem:w-[calc(243px*var(--size-bg-icon))] rem:h-[calc(157px*var(--size-bg-icon))] bg-[url('../img/bg-icon/partner-bg-santa-claus-delivers-gifts.svg')] bg-no-repeat bg-bottom bg-cover")
++MenuBottomMobile()
++HamburgerMenu()
++SearchHeader()
++Tool()

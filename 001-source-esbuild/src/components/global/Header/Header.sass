@@ -1,0 +1,27 @@
+header
+    @apply sticky top-0 left-0 w-screen
+    @apply z-[1002]
+    &.active
+        @apply shadow-[0_-2px_7px_rgba(0,0,0,0.3)]
+    .header-language
+        .header-language-active
+            @apply flex items-center
+            li:not(.wpml-ls-current-language)
+                @apply hidden
+        .header-language-list
+            li.wpml-ls-current-language
+                @apply hidden  
+    .header-languge 
+        ul
+            @apply flex
+            li a
+                @apply flex-y-center gap-x-3
+                img
+                    @apply rem:w-[36px] rem:h-[36px] -lg:w-[25px] -lg:h-[25px] -lg:hidden
+            &>:nth-child(2)
+                @apply flex-y-center
+                &::before
+                    @apply content-[''] block w-[1px] h-5 bg-neutral-300 mx-3
+
+                    
+                    

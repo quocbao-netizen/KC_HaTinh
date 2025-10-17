@@ -1,0 +1,20 @@
+section.section-banner
+	.swiper.swiper-banner-main 
+		.swiper-wrapper 
+			.swiper-slide(class="relative before:content-[''] before:block before:absolute before:left-0 before:top-0 before:h-full before:w-6/12 before:bg-[linear-gradient(to_left,rgba(0,104,57,0),rgba(1,28,15,0.7))] before:z-1")
+				a(href="#!" class="img-ratio ratio:pt-[2_3] sm:ratio:pt-[1_2] md:ratio:pt-[800_1920] ")
+					+PugImg("./img/banner/banner-1.svg")
+				.container(class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-2")
+					.block-content(class="w-5/12 -lg:w-full")
+						h2.content(class="title-48 text-[28px] font-extrabold text-white") Chất lượng vượt trội, lợi nhuận bền vững, bảo vệ tương lai xanh!
+						+BtnPrimary("khám phá thêm")(class="mt-10")
+			.swiper-slide(class="relative before:content-[''] before:block before:absolute before:left-0 before:top-0 before:h-full before:w-6/12 before:bg-[linear-gradient(to_left,rgba(0,104,57,0),rgba(1,28,15,0.7))] before:z-1")
+				a(href="#!" class="img-ratio ratio:pt-[2_3] sm:ratio:pt-[1_2] md:ratio:pt-[800_1920] ")
+					+PugImg("./img/banner/banner-2.svg")
+				.container(class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-2")
+					.block-content(class="w-5/12 -lg:w-full")
+						h2.content(class="title-48 text-[28px] font-extrabold text-white") Chất lượng vượt trội, lợi nhuận bền vững, bảo vệ tương lai xanh!
+						+BtnPrimary("khám phá thêm")(class="mt-10")
+		.container.block-action-banner(class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-2")
+			+BtnSlide("prev")(class="swiper-banner-btn-prev absolute top-1/2 -translate-y-1/2 xl:rem:right-[calc(100%+48px)] -xl:hidden")
+			+BtnSlide("next")(class="swiper-banner-btn-next absolute top-1/2 -translate-y-1/2 h-12 xl:rem:left-[calc(100%+48px)] -xl:hidden")

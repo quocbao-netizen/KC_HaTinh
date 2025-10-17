@@ -1,0 +1,47 @@
+@layer components
+    form.submitting
+        button
+            @apply pointer-events-none relative
+            &::before
+                content: ''
+                animation-duration: 0.5s
+                @apply w-5 h-5 border-3 border-primary-1/40 border-t-primary-1 rounded-full inline-block
+                @apply absolute animate-spin left-full ml-3
+    .featured-menu
+        @apply flex-y-center
+        li.item
+            @apply flex-y-center
+            &.active a
+                @apply text-primary-1 border-primary-1
+            &:not(:last-child)::after
+                @apply content-[''] block w-1 h-1 bg-utility-200 rem:mx-[27px] rounded-full
+    .nav-menu
+        @apply bg-primary-1 relative
+        &::after,&::before
+            @apply content-[''] absolute top-0 block rem:w-[250px] h-full bg-[url('../img/bg-icon/nav-menu-bg-tuyết.svg')] 
+        &::after
+            @apply left-0
+        &::before
+            @apply right-0
+        .header-menu
+            ul
+                @apply flex-y-center 
+                li
+                    @apply flex-y-center
+                    a
+                        @apply uppercase text-lg py-4.25 text-white font-semibold
+                    &:not(:last-child)::after
+                        @apply content-[''] block w-1 h-1 bg-white rem:mx-[41px]
+    .menu-mobile
+        .list-menu-mobile-action
+            .item
+                &.active
+                    @apply text-primary-1
+    body.isOpenMenu
+        .hamburger-menu
+            @apply opacity-100 visible translate-y-0
+    .hamburger-menu
+        .hamburger-list-menu
+            .item
+                &.active
+                    @apply bg-primary-1 text-white

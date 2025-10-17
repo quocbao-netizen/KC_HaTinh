@@ -1,0 +1,53 @@
+footer(class="section-py -lg:mb-[56px] bg-[url('../img/bg-footer.svg')] bg-cover relative")
+    .container(class="relative z-2")
+        .footer-main(class="flex -md:flex-col -md:gap-base")
+            .footer-logo(class="md:flex-[0_0_calc((210/1400)*100%)] md:mr-[calc((50/1400)*100%)]")
+                a(href="#!" class="md:img-ratio md:ratio:pt-[141_210] -md:max-w-full")
+                    +PugImg('./img/logo-footer.svg')
+            .footer-contact-info(class="md:flex-[0_0_calc((504/1400)*100%)] md:mr-[calc((196/1400)*100%)]") 
+                h3.footer-title(class="text-xl text-white font-bold uppercase") THÔNG TIN LIÊN HỆ
+                ul.footer-contact-list(class="flex flex-col gap-y-2 mt-5 text-white") 
+                    li.item 
+                        .block-contact-content(class="text-lg leading-[1.4]")
+                            span.contact-title(class="font-bold") Địa chỉ:
+                            span.contact-content Km 09 đường tránh Thành phố, Phường Hà Huy Tập, tỉnh Hà Tĩnh, Việt Nam
+                    li.item 
+                        .block-contact-content(class="text-lg leading-[1.4]")
+                            span.contact-title(class="font-bold") Email: 
+                            a.contact-content(href="#!") contact@kchatinh.vn
+                    li.item 
+                        .block-contact-content(class="text-lg leading-[1.4]")
+                            span.contact-title(class="font-bold") Hotline: 
+                            a.contact-content(href="#!") 19008026
+                ul.list-social(class="flex-y-center gap-x-5 mt-8.5")
+                    li.item
+                        a(href="#!" class="w-14 h-14 rounded-full flex-center border border-primary-2")
+                            i(class="fa-brands fa-linkedin text-xl text-primary-2")
+                    li.item
+                        a(href="#!" class="w-14 h-14 rounded-full flex-center border border-primary-2")
+                            i(class="fa-brands fa-facebook text-xl text-primary-2")
+                    li.item
+                        a(href="#!" class="w-14 h-14 rounded-full flex-center border border-primary-2")
+                            i(class="fa-brands fa-youtube text-xl text-primary-2")
+                    li.item
+                        a(href="#!" class="w-14 h-14 rounded-full flex-center border border-primary-2")
+                            i(class="fa-brands fa-instagram text-xl text-primary-2")
+            .footer-map(class="md:flex-[0_0_calc((440/1400)*100%)]") 
+                h3.footer-title(class="text-xl text-white font-bold uppercase") HƯỚNG DẪN ĐƯỜNG ĐI
+                .footer-map(class="mt-6.5")
+                    a(href="#!" class="img-ratio ratio:pt-[209_440]")
+                        +PugImg('./img/footer-map.svg') 
+        .footer-bottom(class="flex-between -md:justify-center flex-wrap gap-base pt-5 mt-15 border-t border-[rgba(255,255,255,0.8)]") 
+            span.copyright(class="text-sm text-white ") © 2024 KC Hà Tĩnh . All Rights Reserved. Thiết kế web bởi Cánh Cam.
+            .footer-clause(class="flex-y-center gap-x-7.5")
+                ul.list-clause(class="text-white flex-y-center gap-x-5")
+                    -const arrClause=["Sitemap","Chính sách bảo mật","Điều khoản điều kiện"]
+                    each item in arrClause
+                        li.item(class="text-sm ")
+                            a(href="#!")=item 
+                .bocongthuong-logo 
+                    +PugImg('./img/bocongthuong-logo.svg')(class="max-w-full")
+    .footer-bg-star-left(class="absolute top-0 rem:left-[33px] z-1 rem:w-[calc(211px*var(--size-bg-icon))] rem:h-[calc(120px*var(--size-bg-icon))] bg-[url('../img/bg-icon/footer-star.svg')] bg-no-repeat bg-bottom bg-cover")
+    .footer-bg-star-right(class="absolute top-0 rem:right-[29px] z-1 rem:w-[calc(211px*var(--size-bg-icon))] rem:h-[calc(120px*var(--size-bg-icon))] bg-[url('../img/bg-icon/footer-star.svg')] bg-no-repeat bg-bottom bg-cover")
+    .footer-bg-santa-claus(class="absolute bottom-0 left-0 z-1 rem:w-[calc(274px*var(--size-bg-icon))] rem:h-[calc(282px*var(--size-bg-icon))] bg-[url('../img/bg-icon/footer-bg-santa-claus.svg')] bg-no-repeat bg-bottom bg-cover")
+    .footer-bg-snowman(class="absolute bottom-0 right-0 z-1 rem:w-[calc(237px*var(--size-bg-icon))] rem:h-[calc(211px*var(--size-bg-icon))] bg-[url('../img/bg-icon/footer-bg-snowman.svg')] bg-no-repeat bg-bottom bg-cover")

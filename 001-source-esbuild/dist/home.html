@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" href="">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&amp;display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="./css/core.min.css">
+		<link rel="stylesheet" href="./css/main.min.css">
+		<title></title>
+	</head>
+	<body>
+		<header class="header bg-white">
+			<div class="block-header relative overflow-hidden">
+				<div class="container"> 
+					<div class="header-child lg:grid lg:grid-cols-12 -lg:flex-between gap-base relative z-2">
+						<div class="header-hamburger"><span></span><span></span><span></span>
+							<div id="pulseMe">
+								<div class="bar left"></div>
+								<div class="bar top"></div>
+								<div class="bar right"></div>
+								<div class="bar bottom"></div>
+							</div>
+						</div>
+						<div class="header-logo-search col-span-8 -xl:col-span-6 flex-y-center -xl:gap-x-5">
+							<div class="logo-bg flex gap-x-1 items-end">
+								<div class="logo"> <a href="#!"><img class="lozad rem:max-w-[124px] -lg:max-w-[95px] h-auto" data-src="./img/logo.svg" alt=""/></a></div>
+								<div class="bg-img -xl:hidden"><img class="lozad rem:w-[193px] h-auto" data-src="./img/bg-icon/header-bg-left-2.svg" alt=""/>
+								</div>
+							</div>
+							<div class="header-search grow relative -lg:hidden">
+								<input class="rem:h-[48px] w-full p-1 pl-6 rounded-2 border-none outline-none bg-utility-50 placeholder:text-base placeholder:text-utility-500 text-black" type="text" placeholder="Tìm kiếm...">
+								<button class="h-[100%-8px] aspect-1 rounded-2 bg-primary-2 absolute right-[4px] top-[4px] bottom-[4px]"><i class="fa-regular fa-magnifying-glass text-base text-utility-50"></i></button>
+							</div>
+						</div>
+						<div class="header-user-action col-span-4 -xl:col-span-6 flex-y-center justify-end rem:gap-x-[21px]">
+							<div class="header-languge"> 
+								<ul> 
+									<li class="wpml-ls-item"><a href=""> <img class="lozad undefined" data-src="./img/language/vi.svg" alt=""/><span class="wpml-ls-native">VN</span></a></li>
+									<li class="wpml-ls-item"><a href=""> <img class="lozad undefined" data-src="./img/language/en.svg" alt=""/><span class="wpml-ls-native">EN</span></a></li>
+								</ul>
+							</div>
+							<div class="action-phone flex-y-center gap-x-4 -lg:hidden">
+								<div class="icon flex-center shrink-0 w-12 h-12 rounded-full border border-primary-4"><i class="fa-light fa-phone-volume text-2xl text-primary-4"></i></div>
+								<div class="content"><span class="title text-sm text-utility-500">Bạn cần tư vấn?</span><a class="tell block text-2xl text-primary-4 font-bold" href="#!">1900 80 26 </a></div>
+							</div>
+							<div class="block-cart-mobile lg:hidden">
+								<div class="btn-cart relative w-10 h-10 rounded-full bg-primary-4 flex-center cursor-pointer"><i class="fa-solid fa-cart-shopping text-xl text-white"> </i>
+									<div class="count-cart absolute -right-2 -top-2 w-5 h-5 rounded-full flex-center bg-primary-2 text-white rem:text-[14px] font-medium">0</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="header-bg-right-1 absolute z-1 -xl:hidden top-0 rem:right-[174px] rem:w-[40px] rem:h-[71px] bg-[url('../img/bg-icon/header-bg-right-3.svg')] bg-no-repeat bg-bottom bg-cover">                   </div>
+				<div class="header-bg-right-2 absolute z-1 -xl:hidden top-0 rem:right-[39px] rem:w-[67px] rem:h-[63px] bg-[url('../img/bg-icon/header-bg-right-4.svg')] bg-no-repeat bg-bottom bg-cover">                   </div>
+				<div class="header-bg-right-3 absolute z-1 -xl:hidden bottom-0 rem:right-[90px] rem:w-[73px] rem:h-[43px] bg-[url('../img/bg-icon/header-bg-right-1.svg')] bg-no-repeat bg-bottom bg-cover"> </div>
+			</div>
+			<nav class="nav-menu -lg:hidden">
+				<div class="container"> 
+					<div class="header-menu flex-between gap-base">
+						<div class="swiper-column-auto w-full">
+							<div class="swiper"> 
+								<ul class="swiper-wrapper"> 
+									<li class="swiper-slide !w-auto !mr-0">
+										<div class="menu-item-has-children"><a class="block border-b-[2px] border-transparent transition-500 hover:border-primary-2" href="#!">Giới thiệu</a></div>
+									</li>
+									<li class="swiper-slide !w-auto !mr-0">
+										<div class="menu-item-has-children"><a class="block border-b-[2px] border-transparent transition-500 hover:border-primary-2" href="#!">Sản phẩm</a></div>
+									</li>
+									<li class="swiper-slide !w-auto !mr-0">
+										<div class="menu-item-has-children"><a class="block border-b-[2px] border-transparent transition-500 hover:border-primary-2" href="#!">Dịch vụ</a></div>
+									</li>
+									<li class="swiper-slide !w-auto !mr-0">
+										<div class="menu-item-has-children"><a class="block border-b-[2px] border-transparent transition-500 hover:border-primary-2" href="#!">TIN TỨC &amp; SỰ KIỆN</a></div>
+									</li>
+									<li class="swiper-slide !w-auto !mr-0">
+										<div class="menu-item-has-children"><a class="block border-b-[2px] border-transparent transition-500 hover:border-primary-2" href="#!">MEDIA &amp; COMMUNICATION</a></div>
+									</li>
+									<li class="swiper-slide !w-auto !mr-0">
+										<div class="menu-item-has-children"><a class="block border-b-[2px] border-transparent transition-500 hover:border-primary-2" href="#!">LIÊN HỆ</a></div>
+									</li>
+									<li class="swiper-slide !w-auto !mr-0">
+										<div class="menu-item-has-children"><a class="block border-b-[2px] border-transparent transition-500 hover:border-primary-2" href="#!">NỘI BỘ</a></div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="block-cart"> 
+							<div class="btn-cart relative w-10 h-10 rounded-full bg-primary-4 flex-center cursor-pointer"><i class="fa-solid fa-cart-shopping text-xl text-white"> </i>
+								<div class="count-cart absolute -right-2 -top-2 w-5 h-5 rounded-full flex-center bg-primary-2 text-white rem:text-[14px] font-medium">0</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<section class="section-banner">
+			<div class="swiper swiper-banner-main"> 
+				<div class="swiper-wrapper"> 
+					<div class="swiper-slide relative before:content-[''] before:block before:absolute before:left-0 before:top-0 before:h-full before:w-6/12 before:bg-[linear-gradient(to_left,rgba(0,104,57,0),rgba(1,28,15,0.7))] before:z-1"><a class="img-ratio ratio:pt-[2_3] sm:ratio:pt-[1_2] md:ratio:pt-[800_1920] " href="#!"><img class="lozad undefined" data-src="./img/banner/banner-1.svg" alt=""/></a>
+						<div class="container absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-2">
+							<div class="block-content w-5/12 -lg:w-full">
+								<h2 class="content title-48 text-[28px] font-extrabold text-white">Chất lượng vượt trội, lợi nhuận bền vững, bảo vệ tương lai xanh!</h2><a class="btn primary mt-10" href="">
+									<div class="block-content"><span>khám phá thêm</span><i class="fa-regular fa-arrow-up-right"></i></div></a>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide relative before:content-[''] before:block before:absolute before:left-0 before:top-0 before:h-full before:w-6/12 before:bg-[linear-gradient(to_left,rgba(0,104,57,0),rgba(1,28,15,0.7))] before:z-1"><a class="img-ratio ratio:pt-[2_3] sm:ratio:pt-[1_2] md:ratio:pt-[800_1920] " href="#!"><img class="lozad undefined" data-src="./img/banner/banner-2.svg" alt=""/></a>
+						<div class="container absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-2">
+							<div class="block-content w-5/12 -lg:w-full">
+								<h2 class="content title-48 text-[28px] font-extrabold text-white">Chất lượng vượt trội, lợi nhuận bền vững, bảo vệ tương lai xanh!</h2><a class="btn primary mt-10" href="">
+									<div class="block-content"><span>khám phá thêm</span><i class="fa-regular fa-arrow-up-right"></i></div></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container block-action-banner absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-2">
+					<button class="btn w-10 h-10 rounded-full bg-[rgba(0,0,0,0.36)] text-2xl transition-all duration-[0.4s] hover:bg-primary-2 swiper-banner-btn-prev absolute top-1/2 -translate-y-1/2 xl:rem:right-[calc(100%+48px)] -xl:hidden"><i class="fa-regular fa-angle-left text-white"></i>
+					</button>
+					<button class="btn w-10 h-10 rounded-full bg-[rgba(0,0,0,0.36)] text-2xl transition-all duration-[0.4s] hover:bg-primary-2 swiper-banner-btn-next absolute top-1/2 -translate-y-1/2 h-12 xl:rem:left-[calc(100%+48px)] -xl:hidden"><i class="fa-regular fa-angle-right text-white"></i>
+					</button>
+				</div>
+			</div>
+		</section>
+		<main>
+			<section class="section-about section-py overflow-hidden relative after:content-[''] after:block after:absolute after:inset-0 after:backdrop-blur-sm after:z-1 after:xl:hidden">
+				<div class="container"> 
+					<div class="block-about flex flex-col items-start gap-base relative z-2">
+						<div class="block-content w-6/12 -lg:w-full">
+							<h2 class="about-title title-40 text-primary-1 font-bold">Về KC Hà Tĩnh</h2>
+							<p class="about-desc text-xl leading-[1.4] line-clamp-5">Trải qua chặng đường gần 15 năm gắn bó và đồng hành cùng ngành nông nghiệp tỉnh Hà Tĩnh, Công ty KC Hà Tĩnh đã ghi dấu ấn và trở thành một trong những doanh nghiệp tiêu biểu, tiên phong trong xây dựng chuỗi giá trị nông sản và nền nông nghiệp xanh tại Hà Tĩnh.</p>
+						</div>
+						<ul class="list-stats grid grid-cols-4 -lg:grid-cols-2 -lg:w-full gap-base">
+							<li class="stats-item">
+								<div class="stats-title title-72 text-primary-1 font-bold pb-4 border-b border-utility-100">15+</div>
+								<div class="stats-content pt-4 text-xl line-clamp-2">Năm hoạt động</div>
+							</li>
+							<li class="stats-item">
+								<div class="stats-title title-72 text-primary-1 font-bold pb-4 border-b border-utility-100">40+ </div>
+								<div class="stats-content pt-4 text-xl line-clamp-2">Nước có giao dịch ngoại thương</div>
+							</li>
+							<li class="stats-item">
+								<div class="stats-title title-72 text-primary-1 font-bold pb-4 border-b border-utility-100">2000+</div>
+								<div class="stats-content pt-4 text-xl line-clamp-2">Khách hàng</div>
+							</li>
+							<li class="stats-item">
+								<div class="stats-title title-72 text-primary-1 font-bold pb-4 border-b border-utility-100">1000+</div>
+								<div class="stats-content pt-4 text-xl line-clamp-2">Sản phẩm</div>
+							</li>
+						</ul><a class="btn primary" href="">
+							<div class="block-content"><span>Giới thiệu</span><i class="fa-regular fa-arrow-up-right"></i></div></a>
+					</div>
+				</div>
+				<div class="about-bg-snow absolute bottom-0 left-0 z-1 w-full rem:h-[calc(359px*var(--size-bg-icon))] bg-[url('../img/bg-icon/about-bg-snow.svg')] bg-no-repeat bg-bottom bg-cover"></div>
+				<div class="about-bg-pine-tree absolute rem:bottom-[-42px] rem:left-[-19px] z-1 rem:w-[calc(316px*var(--size-bg-icon))] rem:h-[calc(282px*var(--size-bg-icon))] bg-[url('../img/bg-icon/about-bg-pine-tree.svg')] bg-no-repeat bg-bottom bg-cover"></div>
+				<div class="about-bg-bell absolute rem:top-[-30px] rem:left-[-3px] z-1 rem:w-[calc(210px*var(--size-bg-icon))] rem:h-[calc(538px*var(--size-bg-icon))] bg-[url('../img/bg-icon/about-bg-bell.svg')] bg-no-repeat bg-bottom bg-cover"></div>
+				<div class="about-bg-giraffe absolute bottom-0 rem:right-[-250px] z-1 rem:w-[calc(629px*var(--size-bg-icon))] rem:h-[calc(559px*var(--size-bg-icon))] bg-[url('../img/bg-icon/about-bg-giraffe.svg')] bg-no-repeat bg-bottom bg-cover"></div>
+			</section>
+			<section class="section-featured-products section-py !pt-30 bg-utility-50 relative overflow-hidden">
+				<div class="container">
+					<div class="featured flex flex-col gap-base relative z-2">
+						<div class="featured-top flex-between flex-wrap gap-base">
+							<h2 class="featured-tile title-36 text-primary-1 font-bold ">Sản phẩm nổi bật</h2><a class="btn primary" href="">
+								<div class="block-content"><span>Xem tất cả</span><i class="fa-regular fa-arrow-up-right"></i></div></a>
+						</div>
+						<div class="swiper-column-auto relative">
+							<div class="swiper border-b border-utility-200">
+								<ul class="swiper-wrapper featured-menu">
+									<li class="item swiper-slide !w-auto !mr-0 active"><a class="py-1.75 border-b-[2px] border-transparent text-base text-utility-700 font-bold whitespace-nowrap transition-500 select-none hover:border-primary-1 hover:text-primary-1" href="#!">Tất cả</a></li>
+									<li class="item swiper-slide !w-auto !mr-0 false"><a class="py-1.75 border-b-[2px] border-transparent text-base text-utility-700 font-bold whitespace-nowrap transition-500 select-none hover:border-primary-1 hover:text-primary-1" href="#!">Gạo Ngọc Mầm</a></li>
+									<li class="item swiper-slide !w-auto !mr-0 false"><a class="py-1.75 border-b-[2px] border-transparent text-base text-utility-700 font-bold whitespace-nowrap transition-500 select-none hover:border-primary-1 hover:text-primary-1" href="#!">Điện mặt trời</a></li>
+									<li class="item swiper-slide !w-auto !mr-0 false"><a class="py-1.75 border-b-[2px] border-transparent text-base text-utility-700 font-bold whitespace-nowrap transition-500 select-none hover:border-primary-1 hover:text-primary-1" href="#!">Phân bón - Thuốc BVTV</a></li>
+									<li class="item swiper-slide !w-auto !mr-0 false"><a class="py-1.75 border-b-[2px] border-transparent text-base text-utility-700 font-bold whitespace-nowrap transition-500 select-none hover:border-primary-1 hover:text-primary-1" href="#!">TAGS - Thuốc thú y</a></li>
+									<li class="item swiper-slide !w-auto !mr-0 false"><a class="py-1.75 border-b-[2px] border-transparent text-base text-utility-700 font-bold whitespace-nowrap transition-500 select-none hover:border-primary-1 hover:text-primary-1" href="#!">Nông sản, lương thực - Giống cây trồng</a></li>
+									<li class="item swiper-slide !w-auto !mr-0 false"><a class="py-1.75 border-b-[2px] border-transparent text-base text-utility-700 font-bold whitespace-nowrap transition-500 select-none hover:border-primary-1 hover:text-primary-1" href="#!">Máy nông nghiệp - Nông cụ</a></li>
+								</ul>
+							</div>
+							<button class="btn w-10 h-10 rounded-full bg-[rgba(0,0,0,0.36)] text-2xl transition-all duration-[0.4s] hover:bg-primary-2 btn-next absolute top-1/2 z-3 -translate-y-1/2 right-0 w-7.5 h-7.5 !text-xs bg-primary-1"><i class="fa-regular fa-angle-right text-white"></i>
+							</button>
+						</div>
+						<div class="swiper-column-auto auto-4-column relative ">
+							<div class="swiper"> 
+								<div class="swiper-wrapper !flex-nowrap w-auto">
+									<div class="swiper-slide">
+										<div class="product-item h-full w-full relative bg-white border border-transparent transition-500 group hover:border-primary-2"> 
+											<div class="product-tag absolute left-0 top-0 flex flex-col gap-y-2.75 p-5 z-1 items-start">
+												<div class="update py-1.5 px-2 text-sm text-white bg-primary-1">Mới</div>
+												<div class="discount py-1.5 px-2 text-sm text-white bg-primary-2">Giảm 12%</div>
+											</div>
+											<div class="product-thumb"> <a class="img-ratio" href="#!"> <img class="lozad " data-src="./img/product/product-1.svg" alt=""/></a></div>
+											<div class="product-info flex flex-col items-start gap-y-3 p-6 pt-5">
+												<h3 class="product-name text-xl text-utility-950 font-bold line-clamp-2 leading-[1.4] transition- group-hover:text-primary-2"><a href="#!">Đạm Vàng Đầu Trâu </a></h3>
+												<div class="price flex-between w-full">
+													<div class="price-new text-xl text-primary-2">300.000đ</div>
+													<div class="price-old text-sm text-utility-300 line-through">500.000đ</div>
+												</div>
+												<button class="btn-addcart flex-y-center gap-x-2 px-4 py-2.5 text-primary-1 rounded-full border border-primary-1"> <span class="text-sm font-bold">Thêm vào giỏ hàng</span><i class="fa-regular fa-cart-plus text-lg"></i></button>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="product-item h-full w-full relative bg-white border border-transparent transition-500 group hover:border-primary-2"> 
+											<div class="product-tag absolute left-0 top-0 flex flex-col gap-y-2.75 p-5 z-1 items-start">
+												<div class="update py-1.5 px-2 text-sm text-white bg-primary-1">Mới</div>
+												<div class="discount py-1.5 px-2 text-sm text-white bg-primary-2">Giảm 12%</div>
+											</div>
+											<div class="product-thumb"> <a class="img-ratio" href="#!"> <img class="lozad " data-src="./img/product/product-1.svg" alt=""/></a></div>
+											<div class="product-info flex flex-col items-start gap-y-3 p-6 pt-5">
+												<h3 class="product-name text-xl text-utility-950 font-bold line-clamp-2 leading-[1.4] transition- group-hover:text-primary-2"><a href="#!">Đạm Vàng Đầu Trâu </a></h3>
+												<div class="price flex-between w-full">
+													<div class="price-new text-xl text-primary-2">300.000đ</div>
+													<div class="price-old text-sm text-utility-300 line-through">500.000đ</div>
+												</div>
+												<button class="btn-addcart flex-y-center gap-x-2 px-4 py-2.5 text-primary-1 rounded-full border border-primary-1"> <span class="text-sm font-bold">Thêm vào giỏ hàng</span><i class="fa-regular fa-cart-plus text-lg"></i></button>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="product-item h-full w-full relative bg-white border border-transparent transition-500 group hover:border-primary-2"> 
+											<div class="product-tag absolute left-0 top-0 flex flex-col gap-y-2.75 p-5 z-1 items-start">
+												<div class="update py-1.5 px-2 text-sm text-white bg-primary-1">Mới</div>
+												<div class="discount py-1.5 px-2 text-sm text-white bg-primary-2">Giảm 12%</div>
+											</div>
+											<div class="product-thumb"> <a class="img-ratio" href="#!"> <img class="lozad " data-src="./img/product/product-1.svg" alt=""/></a></div>
+											<div class="product-info flex flex-col items-start gap-y-3 p-6 pt-5">
+												<h3 class="product-name text-xl text-utility-950 font-bold line-clamp-2 leading-[1.4] transition- group-hover:text-primary-2"><a href="#!">Đạm Vàng Đầu Trâu </a></h3>
+												<div class="price flex-between w-full">
+													<div class="price-new text-xl text-primary-2">300.000đ</div>
+													<div class="price-old text-sm text-utility-300 line-through">500.000đ</div>
+												</div>
+												<button class="btn-addcart flex-y-center gap-x-2 px-4 py-2.5 text-primary-1 rounded-full border border-primary-1"> <span class="text-sm font-bold">Thêm vào giỏ hàng</span><i class="fa-regular fa-cart-plus text-lg"></i></button>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="product-item h-full w-full relative bg-white border border-transparent transition-500 group hover:border-primary-2"> 
+											<div class="product-tag absolute left-0 top-0 flex flex-col gap-y-2.75 p-5 z-1 items-start">
+												<div class="update py-1.5 px-2 text-sm text-white bg-primary-1">Mới</div>
+												<div class="discount py-1.5 px-2 text-sm text-white bg-primary-2">Giảm 12%</div>
+											</div>
+											<div class="product-thumb"> <a class="img-ratio" href="#!"> <img class="lozad " data-src="./img/product/product-1.svg" alt=""/></a></div>
+											<div class="product-info flex flex-col items-start gap-y-3 p-6 pt-5">
+												<h3 class="product-name text-xl text-utility-950 font-bold line-clamp-2 leading-[1.4] transition- group-hover:text-primary-2"><a href="#!">Đạm Vàng Đầu Trâu </a></h3>
+												<div class="price flex-between w-full">
+													<div class="price-new text-xl text-primary-2">300.000đ</div>
+													<div class="price-old text-sm text-utility-300 line-through">500.000đ</div>
+												</div>
+												<button class="btn-addcart flex-y-center gap-x-2 px-4 py-2.5 text-primary-1 rounded-full border border-primary-1"> <span class="text-sm font-bold">Thêm vào giỏ hàng</span><i class="fa-regular fa-cart-plus text-lg"></i></button>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="product-item h-full w-full relative bg-white border border-transparent transition-500 group hover:border-primary-2"> 
+											<div class="product-tag absolute left-0 top-0 flex flex-col gap-y-2.75 p-5 z-1 items-start">
+												<div class="update py-1.5 px-2 text-sm text-white bg-primary-1">Mới</div>
+												<div class="discount py-1.5 px-2 text-sm text-white bg-primary-2">Giảm 12%</div>
+											</div>
+											<div class="product-thumb"> <a class="img-ratio" href="#!"> <img class="lozad " data-src="./img/product/product-1.svg" alt=""/></a></div>
+											<div class="product-info flex flex-col items-start gap-y-3 p-6 pt-5">
+												<h3 class="product-name text-xl text-utility-950 font-bold line-clamp-2 leading-[1.4] transition- group-hover:text-primary-2"><a href="#!">Đạm Vàng Đầu Trâu </a></h3>
+												<div class="price flex-between w-full">
+													<div class="price-new text-xl text-primary-2">300.000đ</div>
+													<div class="price-old text-sm text-utility-300 line-through">500.000đ</div>
+												</div>
+												<button class="btn-addcart flex-y-center gap-x-2 px-4 py-2.5 text-primary-1 rounded-full border border-primary-1"> <span class="text-sm font-bold">Thêm vào giỏ hàng</span><i class="fa-regular fa-cart-plus text-lg"></i></button>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="product-item h-full w-full relative bg-white border border-transparent transition-500 group hover:border-primary-2"> 
+											<div class="product-tag absolute left-0 top-0 flex flex-col gap-y-2.75 p-5 z-1 items-start">
+												<div class="update py-1.5 px-2 text-sm text-white bg-primary-1">Mới</div>
+												<div class="discount py-1.5 px-2 text-sm text-white bg-primary-2">Giảm 12%</div>
+											</div>
+											<div class="product-thumb"> <a class="img-ratio" href="#!"> <img class="lozad " data-src="./img/product/product-1.svg" alt=""/></a></div>
+											<div class="product-info flex flex-col items-start gap-y-3 p-6 pt-5">
+												<h3 class="product-name text-xl text-utility-950 font-bold line-clamp-2 leading-[1.4] transition- group-hover:text-primary-2"><a href="#!">Đạm Vàng Đầu Trâu </a></h3>
+												<div class="price flex-between w-full">
+													<div class="price-new text-xl text-primary-2">300.000đ</div>
+													<div class="price-old text-sm text-utility-300 line-through">500.000đ</div>
+												</div>
+												<button class="btn-addcart flex-y-center gap-x-2 px-4 py-2.5 text-primary-1 rounded-full border border-primary-1"> <span class="text-sm font-bold">Thêm vào giỏ hàng</span><i class="fa-regular fa-cart-plus text-lg"></i></button>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="product-item h-full w-full relative bg-white border border-transparent transition-500 group hover:border-primary-2"> 
+											<div class="product-tag absolute left-0 top-0 flex flex-col gap-y-2.75 p-5 z-1 items-start">
+												<div class="update py-1.5 px-2 text-sm text-white bg-primary-1">Mới</div>
+												<div class="discount py-1.5 px-2 text-sm text-white bg-primary-2">Giảm 12%</div>
+											</div>
+											<div class="product-thumb"> <a class="img-ratio" href="#!"> <img class="lozad " data-src="./img/product/product-1.svg" alt=""/></a></div>
+											<div class="product-info flex flex-col items-start gap-y-3 p-6 pt-5">
+												<h3 class="product-name text-xl text-utility-950 font-bold line-clamp-2 leading-[1.4] transition- group-hover:text-primary-2"><a href="#!">Đạm Vàng Đầu Trâu </a></h3>
+												<div class="price flex-between w-full">
+													<div class="price-new text-xl text-primary-2">300.000đ</div>
+													<div class="price-old text-sm text-utility-300 line-through">500.000đ</div>
+												</div>
+												<button class="btn-addcart flex-y-center gap-x-2 px-4 py-2.5 text-primary-1 rounded-full border border-primary-1"> <span class="text-sm font-bold">Thêm vào giỏ hàng</span><i class="fa-regular fa-cart-plus text-lg"></i></button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="wrap-button-slide in-static">
+								<button class="btn w-10 h-10 rounded-full bg-[rgba(0,0,0,0.36)] text-2xl transition-all duration-[0.4s] hover:bg-primary-2 btn-prev"><i class="fa-regular fa-angle-left text-white"></i>
+								</button>
+								<button class="btn w-10 h-10 rounded-full bg-[rgba(0,0,0,0.36)] text-2xl transition-all duration-[0.4s] hover:bg-primary-2 btn-next"><i class="fa-regular fa-angle-right text-white"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="featuredPrd-bg-pine-wire absolute top-0 left-0 right-0 z-1 w-full rem:h-[calc(102px*var(--size-bg-icon))] bg-[url('../img/bg-icon/featuredPrd-bg-pine-wire.svg')] bg-no-repeat bg-bottom bg-cover"></div>
+				<div class="featuredPrd-bg-star-array-1 absolute bottom-0 rem:left-[-30px] z-1 rem:w-[calc(196px*var(--size-bg-icon))] rem:h-[calc(432px*var(--size-bg-icon))] bg-[url('../img/bg-icon/featuredPrd-bg-star-array-1.svg')] bg-no-repeat bg-bottom bg-cover"></div>
+				<div class="featuredPrd-bg-star-array-2 absolute top-0 rem:right-[-10px] z-1 rem:w-[calc(196px*var(--size-bg-icon))] rem:h-[calc(432px*var(--size-bg-icon))] bg-[url('../img/bg-icon/featuredPrd-bg-star-array-2.svg')] bg-no-repeat bg-bottom bg-cover"></div>
+			</section>
+			<section class="section-service bg-[url('../img/bg-icon/service-bg-snow-falling.svg')] bg-no-repeat bg-bottom bg-cover relative overflow-hidden">
+				<div class="service flex -xl:flex-col">
+					<div class="service-content text-white relative xl:rem:pl-[260px] xl:rem:pr-[72px] -xl:p-[20px_15px] xl:rem:pt-[185px] shrink-0 grow-0 basis-[calc((620/1920)*100%)] z-2">
+						<h2 class="service-content-title title-40 font-bold leading-[1.25]">Dịch vụ của chúng tôi</h2>
+						<p class="service-content-desc mt-6.5 text-xl leading-[1.4]">Ngày nay, Công ty chúng tôi trở thành nhà phân phối chính thức của nhiều nhà máy và tập đoàn lớn trên Toàn Quốc, trở thành một địa chỉ uy tín đối với bạn hàng, tin cậy của đối tác và là nơi gửi gắm niềm tin của người tiêu dùng.</p>
+					</div>
+					<div class="block-service relative z-2 flex-[0_0_100%] xl:flex-[0_0_calc((1300/1920)*100%)]">
+						<div class="swiper-column-auto">
+							<div class="swiper"> 
+								<div class="swiper-wrapper"> 
+									<div class="swiper-slide !mr-0 !w-[calc(100%/1.61)] md:!w-[calc(100%/2.61)] lg:!w-[calc(100%/3.61)] relative group">
+										<div class="service-thumb img-ratio ratio:pt-[810_360]"><img class="lozad transition-500 group-hover:scale-105" data-src="./img/service/service-1.svg" alt=""/>
+										</div>
+										<div class="services-info absolute bottom-0 left-0 flex flex-col justify-end items-start gap-y-5 w-full h-[40%] py-10 px-8 bg-[linear-gradient(to_bottom,rgba(0,79,43,0),#004F2B)]">
+											<div class="title text-2xl text-white font-bold ">Vận tải</div><a class="btn primary" href="">
+												<div class="block-content"><span>Khám phá thêm</span><i class="fa-regular fa-arrow-up-right"></i></div></a>
+										</div>
+									</div>
+									<div class="swiper-slide !mr-0 !w-[calc(100%/1.61)] md:!w-[calc(100%/2.61)] lg:!w-[calc(100%/3.61)] relative group">
+										<div class="service-thumb img-ratio ratio:pt-[810_360]"><img class="lozad transition-500 group-hover:scale-105" data-src="./img/service/service-1.svg" alt=""/>
+										</div>
+										<div class="services-info absolute bottom-0 left-0 flex flex-col justify-end items-start gap-y-5 w-full h-[40%] py-10 px-8 bg-[linear-gradient(to_bottom,rgba(0,79,43,0),#004F2B)]">
+											<div class="title text-2xl text-white font-bold ">Vận tải</div><a class="btn primary" href="">
+												<div class="block-content"><span>Khám phá thêm</span><i class="fa-regular fa-arrow-up-right"></i></div></a>
+										</div>
+									</div>
+									<div class="swiper-slide !mr-0 !w-[calc(100%/1.61)] md:!w-[calc(100%/2.61)] lg:!w-[calc(100%/3.61)] relative group">
+										<div class="service-thumb img-ratio ratio:pt-[810_360]"><img class="lozad transition-500 group-hover:scale-105" data-src="./img/service/service-1.svg" alt=""/>
+										</div>
+										<div class="services-info absolute bottom-0 left-0 flex flex-col justify-end items-start gap-y-5 w-full h-[40%] py-10 px-8 bg-[linear-gradient(to_bottom,rgba(0,79,43,0),#004F2B)]">
+											<div class="title text-2xl text-white font-bold ">Vận tải</div><a class="btn primary" href="">
+												<div class="block-content"><span>Khám phá thêm</span><i class="fa-regular fa-arrow-up-right"></i></div></a>
+										</div>
+									</div>
+									<div class="swiper-slide !mr-0 !w-[calc(100%/1.61)] md:!w-[calc(100%/2.61)] lg:!w-[calc(100%/3.61)] relative group">
+										<div class="service-thumb img-ratio ratio:pt-[810_360]"><img class="lozad transition-500 group-hover:scale-105" data-src="./img/service/service-1.svg" alt=""/>
+										</div>
+										<div class="services-info absolute bottom-0 left-0 flex flex-col justify-end items-start gap-y-5 w-full h-[40%] py-10 px-8 bg-[linear-gradient(to_bottom,rgba(0,79,43,0),#004F2B)]">
+											<div class="title text-2xl text-white font-bold ">Vận tải</div><a class="btn primary" href="">
+												<div class="block-content"><span>Khám phá thêm</span><i class="fa-regular fa-arrow-up-right"></i></div></a>
+										</div>
+									</div>
+									<div class="swiper-slide !mr-0 !w-[calc(100%/1.61)] md:!w-[calc(100%/2.61)] lg:!w-[calc(100%/3.61)] relative group">
+										<div class="service-thumb img-ratio ratio:pt-[810_360]"><img class="lozad transition-500 group-hover:scale-105" data-src="./img/service/service-1.svg" alt=""/>
+										</div>
+										<div class="services-info absolute bottom-0 left-0 flex flex-col justify-end items-start gap-y-5 w-full h-[40%] py-10 px-8 bg-[linear-gradient(to_bottom,rgba(0,79,43,0),#004F2B)]">
+											<div class="title text-2xl text-white font-bold ">Vận tải</div><a class="btn primary" href="">
+												<div class="block-content"><span>Khám phá thêm</span><i class="fa-regular fa-arrow-up-right"></i></div></a>
+										</div>
+									</div>
+									<div class="swiper-slide !mr-0 !w-[calc(100%/1.61)] md:!w-[calc(100%/2.61)] lg:!w-[calc(100%/3.61)] relative group">
+										<div class="service-thumb img-ratio ratio:pt-[810_360]"><img class="lozad transition-500 group-hover:scale-105" data-src="./img/service/service-1.svg" alt=""/>
+										</div>
+										<div class="services-info absolute bottom-0 left-0 flex flex-col justify-end items-start gap-y-5 w-full h-[40%] py-10 px-8 bg-[linear-gradient(to_bottom,rgba(0,79,43,0),#004F2B)]">
+											<div class="title text-2xl text-white font-bold ">Vận tải</div><a class="btn primary" href="">
+												<div class="block-content"><span>Khám phá thêm</span><i class="fa-regular fa-arrow-up-right"></i></div></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="service-bg-home-snow absolute rem:bottom-[-236px] rem:left-[-63px] z-1 rem:w-[calc(880px*var(--size-bg-icon))] rem:h-[calc(596px*var(--size-bg-icon))] bg-[url('../img/bg-icon/service-bg-home-snow.svg')] bg-no-repeat bg-bottom bg-cover"></div>
+			</section>
+			<section class="section-news section-py relative overflow-hidden bg-utility-50">
+				<div class="container">
+					<div class="news flex flex-col gap-base relative z-2">
+						<div class="news-top flex-between flex-wrap gap-base">
+							<h2 class="featured-tile title-40 text-primary-1 font-bold ">Sản phẩm nổi bật</h2><a class="btn primary" href="">
+								<div class="block-content"><span>Xem tất cả</span><i class="fa-regular fa-arrow-up-right"></i></div></a>
+						</div>
+						<div class="menu-news"> 
+							<div class="swiper-column-auto relative">
+								<div class="swiper border-b border-utility-200">
+									<ul class="swiper-wrapper featured-menu">
+										<li class="item swiper-slide !w-auto !mr-0 active"><a class="py-1.75 border-b-[2px] border-transparent text-base text-utility-700 font-bold whitespace-nowrap transition-500 select-none hover:border-primary-1 hover:text-primary-1" href="#!">Tin mới</a></li>
+										<li class="item swiper-slide !w-auto !mr-0 false"><a class="py-1.75 border-b-[2px] border-transparent text-base text-utility-700 font-bold whitespace-nowrap transition-500 select-none hover:border-primary-1 hover:text-primary-1" href="#!">Tin hoạt động &amp; Sự kiện</a></li>
+										<li class="item swiper-slide !w-auto !mr-0 false"><a class="py-1.75 border-b-[2px] border-transparent text-base text-utility-700 font-bold whitespace-nowrap transition-500 select-none hover:border-primary-1 hover:text-primary-1" href="#!">Tin tức thị trường</a></li>
+										<li class="item swiper-slide !w-auto !mr-0 false"><a class="py-1.75 border-b-[2px] border-transparent text-base text-utility-700 font-bold whitespace-nowrap transition-500 select-none hover:border-primary-1 hover:text-primary-1" href="#!">Tư vấn tiêu dùng</a></li>
+										<li class="item swiper-slide !w-auto !mr-0 false"><a class="py-1.75 border-b-[2px] border-transparent text-base text-utility-700 font-bold whitespace-nowrap transition-500 select-none hover:border-primary-1 hover:text-primary-1" href="#!">Tuyển dụng</a></li>
+										<li class="item swiper-slide !w-auto !mr-0 false"><a class="py-1.75 border-b-[2px] border-transparent text-base text-utility-700 font-bold whitespace-nowrap transition-500 select-none hover:border-primary-1 hover:text-primary-1" href="#!">Media &amp; Communication</a></li>
+									</ul>
+								</div>
+								<button class="btn w-10 h-10 rounded-full bg-[rgba(0,0,0,0.36)] text-2xl transition-all duration-[0.4s] hover:bg-primary-2 btn-next absolute top-1/2 z-3 -translate-y-1/2 right-0 w-7.5 h-7.5 !text-xs bg-primary-1"><i class="fa-regular fa-angle-right text-white"></i>
+								</button>
+							</div>
+						</div>
+						<div class="block-news"> 
+							<div class="swiper-column-auto auto-3-column relative">
+								<div class="swiper"> 
+									<div class="swiper-wrapper !flex-nowrap w-auto">
+										<div class="swiper-slide">
+											<div class="news-item bg-utility-50">
+												<div class="news-thumb"> <a class="img-ratio ratio:pt-[292_440]" href="#!"><img class="lozad undefined" data-src="./img/news/news-1.svg" alt=""/></a></div>
+												<div class="news-info mt-5">
+													<div class="news-date flex-y-center gap-x-4.75">
+														<svg class="stroke-utility-500 w-3.75 h-3.w-3.75" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M5 1V2H9V1C9 0.46875 9.4375 0 10 0C10.5312 0 11 0.46875 11 1V2H12.5C13.3125 2 14 2.6875 14 3.5V5H0V3.5C0 2.6875 0.65625 2 1.5 2H3V1C3 0.46875 3.4375 0 4 0C4.53125 0 5 0.46875 5 1ZM0 6H14V14.5C14 15.3438 13.3125 16 12.5 16H1.5C0.65625 16 0 15.3438 0 14.5V6ZM2.5 8C2.21875 8 2 8.25 2 8.5V11.5C2 11.7812 2.21875 12 2.5 12H5.5C5.75 12 6 11.7812 6 11.5V8.5C6 8.25 5.75 8 5.5 8H2.5Z" fill="#818181"></path>
+														</svg><span class="date-content text-2xl font-bold text-utility-500">08.08.2024</span>
+													</div>
+													<h3 class="news-name text-2xl font-bold leading-[1.24] line-clamp-2 mt-2"> <a href="#!">Nông sản là gì? Kinh doanh nông sản cần tuân thủ các điều kiện gì? </a></h3>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="news-item bg-utility-50">
+												<div class="news-thumb"> <a class="img-ratio ratio:pt-[292_440]" href="#!"><img class="lozad undefined" data-src="./img/news/news-1.svg" alt=""/></a></div>
+												<div class="news-info mt-5">
+													<div class="news-date flex-y-center gap-x-4.75">
+														<svg class="stroke-utility-500 w-3.75 h-3.w-3.75" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M5 1V2H9V1C9 0.46875 9.4375 0 10 0C10.5312 0 11 0.46875 11 1V2H12.5C13.3125 2 14 2.6875 14 3.5V5H0V3.5C0 2.6875 0.65625 2 1.5 2H3V1C3 0.46875 3.4375 0 4 0C4.53125 0 5 0.46875 5 1ZM0 6H14V14.5C14 15.3438 13.3125 16 12.5 16H1.5C0.65625 16 0 15.3438 0 14.5V6ZM2.5 8C2.21875 8 2 8.25 2 8.5V11.5C2 11.7812 2.21875 12 2.5 12H5.5C5.75 12 6 11.7812 6 11.5V8.5C6 8.25 5.75 8 5.5 8H2.5Z" fill="#818181"></path>
+														</svg><span class="date-content text-2xl font-bold text-utility-500">08.08.2024</span>
+													</div>
+													<h3 class="news-name text-2xl font-bold leading-[1.24] line-clamp-2 mt-2"> <a href="#!">Nông sản là gì? Kinh doanh nông sản cần tuân thủ các điều kiện gì? </a></h3>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="news-item bg-utility-50">
+												<div class="news-thumb"> <a class="img-ratio ratio:pt-[292_440]" href="#!"><img class="lozad undefined" data-src="./img/news/news-1.svg" alt=""/></a></div>
+												<div class="news-info mt-5">
+													<div class="news-date flex-y-center gap-x-4.75">
+														<svg class="stroke-utility-500 w-3.75 h-3.w-3.75" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M5 1V2H9V1C9 0.46875 9.4375 0 10 0C10.5312 0 11 0.46875 11 1V2H12.5C13.3125 2 14 2.6875 14 3.5V5H0V3.5C0 2.6875 0.65625 2 1.5 2H3V1C3 0.46875 3.4375 0 4 0C4.53125 0 5 0.46875 5 1ZM0 6H14V14.5C14 15.3438 13.3125 16 12.5 16H1.5C0.65625 16 0 15.3438 0 14.5V6ZM2.5 8C2.21875 8 2 8.25 2 8.5V11.5C2 11.7812 2.21875 12 2.5 12H5.5C5.75 12 6 11.7812 6 11.5V8.5C6 8.25 5.75 8 5.5 8H2.5Z" fill="#818181"></path>
+														</svg><span class="date-content text-2xl font-bold text-utility-500">08.08.2024</span>
+													</div>
+													<h3 class="news-name text-2xl font-bold leading-[1.24] line-clamp-2 mt-2"> <a href="#!">Nông sản là gì? Kinh doanh nông sản cần tuân thủ các điều kiện gì? </a></h3>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="news-item bg-utility-50">
+												<div class="news-thumb"> <a class="img-ratio ratio:pt-[292_440]" href="#!"><img class="lozad undefined" data-src="./img/news/news-1.svg" alt=""/></a></div>
+												<div class="news-info mt-5">
+													<div class="news-date flex-y-center gap-x-4.75">
+														<svg class="stroke-utility-500 w-3.75 h-3.w-3.75" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M5 1V2H9V1C9 0.46875 9.4375 0 10 0C10.5312 0 11 0.46875 11 1V2H12.5C13.3125 2 14 2.6875 14 3.5V5H0V3.5C0 2.6875 0.65625 2 1.5 2H3V1C3 0.46875 3.4375 0 4 0C4.53125 0 5 0.46875 5 1ZM0 6H14V14.5C14 15.3438 13.3125 16 12.5 16H1.5C0.65625 16 0 15.3438 0 14.5V6ZM2.5 8C2.21875 8 2 8.25 2 8.5V11.5C2 11.7812 2.21875 12 2.5 12H5.5C5.75 12 6 11.7812 6 11.5V8.5C6 8.25 5.75 8 5.5 8H2.5Z" fill="#818181"></path>
+														</svg><span class="date-content text-2xl font-bold text-utility-500">08.08.2024</span>
+													</div>
+													<h3 class="news-name text-2xl font-bold leading-[1.24] line-clamp-2 mt-2"> <a href="#!">Nông sản là gì? Kinh doanh nông sản cần tuân thủ các điều kiện gì? </a></h3>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="news-item bg-utility-50">
+												<div class="news-thumb"> <a class="img-ratio ratio:pt-[292_440]" href="#!"><img class="lozad undefined" data-src="./img/news/news-1.svg" alt=""/></a></div>
+												<div class="news-info mt-5">
+													<div class="news-date flex-y-center gap-x-4.75">
+														<svg class="stroke-utility-500 w-3.75 h-3.w-3.75" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M5 1V2H9V1C9 0.46875 9.4375 0 10 0C10.5312 0 11 0.46875 11 1V2H12.5C13.3125 2 14 2.6875 14 3.5V5H0V3.5C0 2.6875 0.65625 2 1.5 2H3V1C3 0.46875 3.4375 0 4 0C4.53125 0 5 0.46875 5 1ZM0 6H14V14.5C14 15.3438 13.3125 16 12.5 16H1.5C0.65625 16 0 15.3438 0 14.5V6ZM2.5 8C2.21875 8 2 8.25 2 8.5V11.5C2 11.7812 2.21875 12 2.5 12H5.5C5.75 12 6 11.7812 6 11.5V8.5C6 8.25 5.75 8 5.5 8H2.5Z" fill="#818181"></path>
+														</svg><span class="date-content text-2xl font-bold text-utility-500">08.08.2024</span>
+													</div>
+													<h3 class="news-name text-2xl font-bold leading-[1.24] line-clamp-2 mt-2"> <a href="#!">Nông sản là gì? Kinh doanh nông sản cần tuân thủ các điều kiện gì? </a></h3>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="news-item bg-utility-50">
+												<div class="news-thumb"> <a class="img-ratio ratio:pt-[292_440]" href="#!"><img class="lozad undefined" data-src="./img/news/news-1.svg" alt=""/></a></div>
+												<div class="news-info mt-5">
+													<div class="news-date flex-y-center gap-x-4.75">
+														<svg class="stroke-utility-500 w-3.75 h-3.w-3.75" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M5 1V2H9V1C9 0.46875 9.4375 0 10 0C10.5312 0 11 0.46875 11 1V2H12.5C13.3125 2 14 2.6875 14 3.5V5H0V3.5C0 2.6875 0.65625 2 1.5 2H3V1C3 0.46875 3.4375 0 4 0C4.53125 0 5 0.46875 5 1ZM0 6H14V14.5C14 15.3438 13.3125 16 12.5 16H1.5C0.65625 16 0 15.3438 0 14.5V6ZM2.5 8C2.21875 8 2 8.25 2 8.5V11.5C2 11.7812 2.21875 12 2.5 12H5.5C5.75 12 6 11.7812 6 11.5V8.5C6 8.25 5.75 8 5.5 8H2.5Z" fill="#818181"></path>
+														</svg><span class="date-content text-2xl font-bold text-utility-500">08.08.2024</span>
+													</div>
+													<h3 class="news-name text-2xl font-bold leading-[1.24] line-clamp-2 mt-2"> <a href="#!">Nông sản là gì? Kinh doanh nông sản cần tuân thủ các điều kiện gì? </a></h3>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="news-item bg-utility-50">
+												<div class="news-thumb"> <a class="img-ratio ratio:pt-[292_440]" href="#!"><img class="lozad undefined" data-src="./img/news/news-1.svg" alt=""/></a></div>
+												<div class="news-info mt-5">
+													<div class="news-date flex-y-center gap-x-4.75">
+														<svg class="stroke-utility-500 w-3.75 h-3.w-3.75" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M5 1V2H9V1C9 0.46875 9.4375 0 10 0C10.5312 0 11 0.46875 11 1V2H12.5C13.3125 2 14 2.6875 14 3.5V5H0V3.5C0 2.6875 0.65625 2 1.5 2H3V1C3 0.46875 3.4375 0 4 0C4.53125 0 5 0.46875 5 1ZM0 6H14V14.5C14 15.3438 13.3125 16 12.5 16H1.5C0.65625 16 0 15.3438 0 14.5V6ZM2.5 8C2.21875 8 2 8.25 2 8.5V11.5C2 11.7812 2.21875 12 2.5 12H5.5C5.75 12 6 11.7812 6 11.5V8.5C6 8.25 5.75 8 5.5 8H2.5Z" fill="#818181"></path>
+														</svg><span class="date-content text-2xl font-bold text-utility-500">08.08.2024</span>
+													</div>
+													<h3 class="news-name text-2xl font-bold leading-[1.24] line-clamp-2 mt-2"> <a href="#!">Nông sản là gì? Kinh doanh nông sản cần tuân thủ các điều kiện gì? </a></h3>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="wrap-button-slide in-static">
+									<button class="btn w-10 h-10 rounded-full bg-[rgba(0,0,0,0.36)] text-2xl transition-all duration-[0.4s] hover:bg-primary-2 btn-prev"><i class="fa-regular fa-angle-left text-white"></i>
+									</button>
+									<button class="btn w-10 h-10 rounded-full bg-[rgba(0,0,0,0.36)] text-2xl transition-all duration-[0.4s] hover:bg-primary-2 btn-next"><i class="fa-regular fa-angle-right text-white"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="news-bg-gift-1 absolute -xl:hidden top-17.5 left-0 z-1 rem:w-[calc(184px*var(--size-bg-icon))] rem:h-[calc(356px*var(--size-bg-icon))] bg-[url('../img/bg-icon/news-bg-gift-1.svg')] bg-no-repeat bg-bottom bg-cover"></div>
+				<div class="news-bg-gift-2 absolute -xl:hidden bottom-0 right-0 z-1 rem:w-[calc(184px*var(--size-bg-icon))] rem:h-[calc(356px*var(--size-bg-icon))] bg-[url('../img/bg-icon/news-bg-gift-2.svg')] bg-no-repeat bg-bottom bg-cover"></div>
+				<div class="news-bg-snow-1 absolute bottom-25 left-10 z-1 rem:w-[calc(105px*var(--size-bg-icon))] rem:h-[calc(141px*var(--size-bg-icon))] bg-[url('../img/bg-icon/news-bg-snow-1.svg')] bg-no-repeat bg-bottom bg-cover"></div>
+				<div class="news-bg-snow-2 absolute top-17.5 right-17.5 z-1 rem:w-[calc(118px*var(--size-bg-icon))] rem:h-[calc(206px*var(--size-bg-icon))] bg-[url('../img/bg-icon/news-bg-snow-2.svg')] bg-no-repeat bg-bottom bg-cover"></div>
+			</section>
+			<section class="section-presence pt-30 pb-7.5 relative overflow-hidden">
+				<div class="presence flex relative z-2 -xl:flex-col -xl:px-[15px]">
+					<div class="presence-nation xl:rem:pl-[260px] xl:pr-2.5 xl:flex-[0_0_calc((690/1920)*100%)] -xl:w-full">
+						<h2 class="presence-nation-title title-40 text-primary-1 font-bold pb-3">Sự hiện diện toàn cầu</h2>
+						<ul class="presence-nation-list grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-2 gap-x-5 gap-y-4 pt-4 border-t border-primary-1 ">
+							<li class="item flex-y-center gap-x-3 py-1.75">
+								<div class="presence-nation-img"><img class="lozad w-10 rem:h-[26px]" data-src="./img/presence-nation/presence-nation-1.svg" alt=""/>
+								</div><span class="content text-lg capitalize">Lào</span>
+							</li>
+							<li class="item flex-y-center gap-x-3 py-1.75">
+								<div class="presence-nation-img"><img class="lozad w-10 rem:h-[26px]" data-src="./img/presence-nation/presence-nation-1.svg" alt=""/>
+								</div><span class="content text-lg capitalize">Lào</span>
+							</li>
+							<li class="item flex-y-center gap-x-3 py-1.75">
+								<div class="presence-nation-img"><img class="lozad w-10 rem:h-[26px]" data-src="./img/presence-nation/presence-nation-1.svg" alt=""/>
+								</div><span class="content text-lg capitalize">Lào</span>
+							</li>
+							<li class="item flex-y-center gap-x-3 py-1.75">
+								<div class="presence-nation-img"><img class="lozad w-10 rem:h-[26px]" data-src="./img/presence-nation/presence-nation-1.svg" alt=""/>
+								</div><span class="content text-lg capitalize">Lào</span>
+							</li>
+							<li class="item flex-y-center gap-x-3 py-1.75">
+								<div class="presence-nation-img"><img class="lozad w-10 rem:h-[26px]" data-src="./img/presence-nation/presence-nation-1.svg" alt=""/>
+								</div><span class="content text-lg capitalize">Lào</span>
+							</li>
+							<li class="item flex-y-center gap-x-3 py-1.75">
+								<div class="presence-nation-img"><img class="lozad w-10 rem:h-[26px]" data-src="./img/presence-nation/presence-nation-1.svg" alt=""/>
+								</div><span class="content text-lg capitalize">Lào</span>
+							</li>
+							<li class="item flex-y-center gap-x-3 py-1.75">
+								<div class="presence-nation-img"><img class="lozad w-10 rem:h-[26px]" data-src="./img/presence-nation/presence-nation-1.svg" alt=""/>
+								</div><span class="content text-lg capitalize">Lào</span>
+							</li>
+							<li class="item flex-y-center gap-x-3 py-1.75">
+								<div class="presence-nation-img"><img class="lozad w-10 rem:h-[26px]" data-src="./img/presence-nation/presence-nation-1.svg" alt=""/>
+								</div><span class="content text-lg capitalize">Lào</span>
+							</li>
+							<li class="item flex-y-center gap-x-3 py-1.75">
+								<div class="presence-nation-img"><img class="lozad w-10 rem:h-[26px]" data-src="./img/presence-nation/presence-nation-1.svg" alt=""/>
+								</div><span class="content text-lg capitalize">Lào</span>
+							</li>
+							<li class="item flex-y-center gap-x-3 py-1.75">
+								<div class="presence-nation-img"><img class="lozad w-10 rem:h-[26px]" data-src="./img/presence-nation/presence-nation-1.svg" alt=""/>
+								</div><span class="content text-lg capitalize">Lào</span>
+							</li>
+							<li class="item flex-y-center gap-x-3 py-1.75">
+								<div class="presence-nation-img"><img class="lozad w-10 rem:h-[26px]" data-src="./img/presence-nation/presence-nation-1.svg" alt=""/>
+								</div><span class="content text-lg capitalize">Lào</span>
+							</li>
+							<li class="item flex-y-center gap-x-3 py-1.75">
+								<div class="presence-nation-img"><img class="lozad w-10 rem:h-[26px]" data-src="./img/presence-nation/presence-nation-1.svg" alt=""/>
+								</div><span class="content text-lg capitalize">Lào</span>
+							</li>
+							<li class="item flex-y-center gap-x-3 py-1.75">
+								<div class="presence-nation-img"><img class="lozad w-10 rem:h-[26px]" data-src="./img/presence-nation/presence-nation-1.svg" alt=""/>
+								</div><span class="content text-lg capitalize">Lào</span>
+							</li>
+						</ul>
+					</div>
+					<div class="presence-block-map xl:flex-[0_0_calc((1230/1920)*100%)] -xl:w-full xl:rem:pr-[92px]">
+						<div class="presence-map img-full"> <img class="lozad undefined" data-src="./img/map.svg" alt=""/>
+						</div>
+					</div>
+				</div>
+				<div class="presence-bg-christmas-tree absolute -sm:hidden rem:bottom-[-132px] left-0 z-1 rem:w-[calc(278px*var(--size-bg-icon))] rem:h-[calc(704px*var(--size-bg-icon))] bg-[url('../img/bg-icon/presence-bg-christmas-tree.svg')] bg-no-repeat bg-bottom bg-cover"></div>
+			</section>
+			<section class="section-partner section-py bg-utility-50 relative overflow-hidden">
+				<div class="container"> 
+					<div class="partner-list relative z-2">
+						<div class="swiper-column-auto auto-6-column relative">
+							<div class="swiper"> 
+								<div class="swiper-wrapper">
+									<div class="swiper-slide group">
+										<div class="partner-thumb img-ratio ratio:pt-[120_200] border border-transparent transition-500 group-hover:hover:border-primary-1"><img class="lozad undefined" data-src="./img/partner-1.svg" alt=""/>
+										</div>
+										<div class="partner-info pt-4 text-center text-lg leading-[1.4] text-utility-950 transition-500 group-hover:text-primary-1 line-clamp-2">Bộ Nông nghiệp và Phát triển nông thôn</div>
+									</div>
+									<div class="swiper-slide group">
+										<div class="partner-thumb img-ratio ratio:pt-[120_200] border border-transparent transition-500 group-hover:hover:border-primary-1"><img class="lozad undefined" data-src="./img/partner-1.svg" alt=""/>
+										</div>
+										<div class="partner-info pt-4 text-center text-lg leading-[1.4] text-utility-950 transition-500 group-hover:text-primary-1 line-clamp-2">Bộ Nông nghiệp và Phát triển nông thôn</div>
+									</div>
+									<div class="swiper-slide group">
+										<div class="partner-thumb img-ratio ratio:pt-[120_200] border border-transparent transition-500 group-hover:hover:border-primary-1"><img class="lozad undefined" data-src="./img/partner-1.svg" alt=""/>
+										</div>
+										<div class="partner-info pt-4 text-center text-lg leading-[1.4] text-utility-950 transition-500 group-hover:text-primary-1 line-clamp-2">Bộ Nông nghiệp và Phát triển nông thôn</div>
+									</div>
+									<div class="swiper-slide group">
+										<div class="partner-thumb img-ratio ratio:pt-[120_200] border border-transparent transition-500 group-hover:hover:border-primary-1"><img class="lozad undefined" data-src="./img/partner-1.svg" alt=""/>
+										</div>
+										<div class="partner-info pt-4 text-center text-lg leading-[1.4] text-utility-950 transition-500 group-hover:text-primary-1 line-clamp-2">Bộ Nông nghiệp và Phát triển nông thôn</div>
+									</div>
+									<div class="swiper-slide group">
+										<div class="partner-thumb img-ratio ratio:pt-[120_200] border border-transparent transition-500 group-hover:hover:border-primary-1"><img class="lozad undefined" data-src="./img/partner-1.svg" alt=""/>
+										</div>
+										<div class="partner-info pt-4 text-center text-lg leading-[1.4] text-utility-950 transition-500 group-hover:text-primary-1 line-clamp-2">Bộ Nông nghiệp và Phát triển nông thôn</div>
+									</div>
+									<div class="swiper-slide group">
+										<div class="partner-thumb img-ratio ratio:pt-[120_200] border border-transparent transition-500 group-hover:hover:border-primary-1"><img class="lozad undefined" data-src="./img/partner-1.svg" alt=""/>
+										</div>
+										<div class="partner-info pt-4 text-center text-lg leading-[1.4] text-utility-950 transition-500 group-hover:text-primary-1 line-clamp-2">Bộ Nông nghiệp và Phát triển nông thôn</div>
+									</div>
+									<div class="swiper-slide group">
+										<div class="partner-thumb img-ratio ratio:pt-[120_200] border border-transparent transition-500 group-hover:hover:border-primary-1"><img class="lozad undefined" data-src="./img/partner-1.svg" alt=""/>
+										</div>
+										<div class="partner-info pt-4 text-center text-lg leading-[1.4] text-utility-950 transition-500 group-hover:text-primary-1 line-clamp-2">Bộ Nông nghiệp và Phát triển nông thôn</div>
+									</div>
+									<div class="swiper-slide group">
+										<div class="partner-thumb img-ratio ratio:pt-[120_200] border border-transparent transition-500 group-hover:hover:border-primary-1"><img class="lozad undefined" data-src="./img/partner-1.svg" alt=""/>
+										</div>
+										<div class="partner-info pt-4 text-center text-lg leading-[1.4] text-utility-950 transition-500 group-hover:text-primary-1 line-clamp-2">Bộ Nông nghiệp và Phát triển nông thôn</div>
+									</div>
+								</div>
+							</div>
+							<div class="wrap-button-slide in-static">
+								<button class="btn w-10 h-10 rounded-full bg-[rgba(0,0,0,0.36)] text-2xl transition-all duration-[0.4s] hover:bg-primary-2 btn-prev xl:!translate-y-0 xl:!top-10"><i class="fa-regular fa-angle-left text-white"></i>
+								</button>
+								<button class="btn w-10 h-10 rounded-full bg-[rgba(0,0,0,0.36)] text-2xl transition-all duration-[0.4s] hover:bg-primary-2 btn-next xl:!translate-y-0 xl:!top-10"><i class="fa-regular fa-angle-right text-white"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="partner-bg-christmas-tree absolute -xl:hidden rem:bottom-[-72px] rem:left-[-56px] z-1 rem:w-[calc(316px*var(--size-bg-icon))] rem:h-[calc(282px*var(--size-bg-icon))] bg-[url('../img/bg-icon/partner-bg-christmas-tree.svg')] bg-no-repeat bg-bottom bg-cover"></div>
+				<div class="partner-bg-santa-claus-gifts absolute -xl:hidden rem:bottom-[29px] right-3 z-1 rem:w-[calc(243px*var(--size-bg-icon))] rem:h-[calc(157px*var(--size-bg-icon))] bg-[url('../img/bg-icon/partner-bg-santa-claus-delivers-gifts.svg')] bg-no-repeat bg-bottom bg-cover"></div>
+			</section>
+			<div class="menu-mobile fixed bottom-0 left-0 w-full bg-white z-[1004] shadow-[0_2px_10px_10px_rgba(0,0,0,0.05)] lg:hidden">
+				<ul class="list-menu-mobile-action grid grid-cols-5 text-utility-600">
+					<li class="item active"><a class="flex flex-col gap-y-[2px] items-center w-full p-[10px_5px]" href="#!"><i class="fa-regular fa-house text-[16px]"></i><span class="content text-[12px]">Trang chủ</span></a></li>
+					<li class="item open-hamburger-menu flex flex-col gap-y-[2px] items-center w-full p-[10px_5px]"><i class="fa-regular fa-list text-[16px]"></i><span class="content text-[12px]">Danh mục</span></li>
+					<li class="item open-search-mobile flex flex-col gap-y-[2px] items-center w-full p-[10px_5px]"><i class="fa-regular fa-magnifying-glass text-[16px]"></i><span class="content text-[12px]">Trang chủ</span></li>
+					<li class="item"><a class="flex flex-col gap-y-[2px] items-center w-full p-[10px_5px]" href="#!"><i class="fa-regular fa-headset text-[16px]"></i><span class="content text-[12px]">Trang chủ</span></a></li>
+					<li class="item"> <a class="flex flex-col gap-y-[2px] items-center w-full p-[10px_5px]" href="#!"><i class="fa-regular fa-circle-user text-[16px]"></i><span class="content text-[12px]">Trang chủ</span></a></li>
+				</ul>
+			</div>
+			<div class="hamburger-menu fixed inset-0 z-[1003] bg-white opacity-0 invisible translate-y-[25%] transition-500"> 
+				<div class="hamburger-menu-top flex-between pl-[15px] border-b-[2px] border-primary-2 bg-primary-1">
+					<div class="title text-[15px] font-bold uppercase text-white">Danh mục</div>
+					<button class="close-hamburger-menu w-[40px] h-[40px] bg-[#125937]"><i class="fa-regular fa-xmark text-[18px] text-white"></i></button>
+				</div>
+				<ul class="hamburger-list-menu text-utility-900">
+					<li class="item active"><a class="block p-[12.5px_15px] text-sm" href="#!">Trang chủ </a></li>
+					<li class="item"> <a class="block p-[12.5px_15px] text-sm" href="#!">Trang chủ </a></li>
+					<li class="item"> <a class="block p-[12.5px_15px] text-sm" href="#!">Trang chủ </a></li>
+					<li class="item"> <a class="block p-[12.5px_15px] text-sm" href="#!">Trang chủ </a></li>
+					<li class="item"> <a class="block p-[12.5px_15px] text-sm" href="#!">Trang chủ </a></li>
+				</ul>
+			</div>
+			<div class="header-search-form">
+				<div class="close flex items-center justify-center absolute top-0 right-0 bg-white text-3xl cursor-pointer w-12.5 h-12.5"><i class="fa-light fa-xmark"></i></div>
+				<div class="container">
+					<div class="wrap-form-search-product">
+						<div class="productsearchbox">
+							<input type="text" placeholder="Tìm kiếm"/>
+							<button></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<ul class="list-tool fixed right-10 -lg:right-[12px] bottom-10 -lg:bottom-[calc(56px+12px)] flex flex-col gap-y-1 z-[1000]">
+				<li class="item button-to-top flex-center w-11 h-11 -md:w-[32px] -md:h-[32px] rounded-lg bg-primary-2 text-xl -md:text-[14px] text-white cursor-pointer"><i class="fa-regular fa-up-to-line "></i></li>
+				<li class="item text-xl -md:text-[14px] text-white"><a class="w-11 h-11 -md:w-[32px] -md:h-[32px] rounded-lg bg-utility-300 flex-center" href="#!"> <i class="fa-regular fa-phone"></i></a></li>
+				<li class="item text-xl -md:text-[14px] text-white"><a class="w-11 h-11 -md:w-[32px] -md:h-[32px] rounded-lg bg-utility-300 flex-center" href="#!"> <i class="fa-regular fa-pen-to-square"></i></a></li>
+				<li class="item text-xl -md:text-[14px] text-white"><a class="w-11 h-11 -md:w-[32px] -md:h-[32px] rounded-lg bg-utility-300 flex-center" href="#!"> <img class="lozad w-6.5 h-6.5 -md:w-[18px]" data-src="./img/zalo.svg" alt=""/></a></li>
+				<li class="item text-xl -md:text-[14px] text-white"><a class="w-11 h-11 -md:w-[32px] -md:h-[32px] rounded-lg bg-utility-300 flex-center" href="#!"> <img class="lozad w-6.5 h-6.5 -md:w-[18px]" data-src="./img/mess.svg" alt=""/></a></li>
+			</ul>
+		</main>
+		<footer class="section-py -lg:mb-[56px] bg-[url('../img/bg-footer.svg')] bg-cover relative">
+			<div class="container relative z-2">
+				<div class="footer-main flex -md:flex-col -md:gap-base">
+					<div class="footer-logo md:flex-[0_0_calc((210/1400)*100%)] md:mr-[calc((50/1400)*100%)]"><a class="md:img-ratio md:ratio:pt-[141_210] -md:max-w-full" href="#!"><img class="lozad undefined" data-src="./img/logo-footer.svg" alt=""/></a></div>
+					<div class="footer-contact-info md:flex-[0_0_calc((504/1400)*100%)] md:mr-[calc((196/1400)*100%)]"> 
+						<h3 class="footer-title text-xl text-white font-bold uppercase">THÔNG TIN LIÊN HỆ</h3>
+						<ul class="footer-contact-list flex flex-col gap-y-2 mt-5 text-white"> 
+							<li class="item"> 
+								<div class="block-contact-content text-lg leading-[1.4]"><span class="contact-title font-bold">Địa chỉ:</span><span class="contact-content">Km 09 đường tránh Thành phố, Phường Hà Huy Tập, tỉnh Hà Tĩnh, Việt Nam</span></div>
+							</li>
+							<li class="item"> 
+								<div class="block-contact-content text-lg leading-[1.4]"><span class="contact-title font-bold">Email: </span><a class="contact-content" href="#!">contact@kchatinh.vn</a></div>
+							</li>
+							<li class="item"> 
+								<div class="block-contact-content text-lg leading-[1.4]"><span class="contact-title font-bold">Hotline: </span><a class="contact-content" href="#!">19008026</a></div>
+							</li>
+						</ul>
+						<ul class="list-social flex-y-center gap-x-5 mt-8.5">
+							<li class="item"><a class="w-14 h-14 rounded-full flex-center border border-primary-2" href="#!"><i class="fa-brands fa-linkedin text-xl text-primary-2"></i></a></li>
+							<li class="item"><a class="w-14 h-14 rounded-full flex-center border border-primary-2" href="#!"><i class="fa-brands fa-facebook text-xl text-primary-2"></i></a></li>
+							<li class="item"><a class="w-14 h-14 rounded-full flex-center border border-primary-2" href="#!"><i class="fa-brands fa-youtube text-xl text-primary-2"></i></a></li>
+							<li class="item"><a class="w-14 h-14 rounded-full flex-center border border-primary-2" href="#!"><i class="fa-brands fa-instagram text-xl text-primary-2"></i></a></li>
+						</ul>
+					</div>
+					<div class="footer-map md:flex-[0_0_calc((440/1400)*100%)]"> 
+						<h3 class="footer-title text-xl text-white font-bold uppercase">HƯỚNG DẪN ĐƯỜNG ĐI</h3>
+						<div class="footer-map mt-6.5"><a class="img-ratio ratio:pt-[209_440]" href="#!"><img class="lozad undefined" data-src="./img/footer-map.svg" alt=""/></a></div>
+					</div>
+				</div>
+				<div class="footer-bottom flex-between -md:justify-center flex-wrap gap-base pt-5 mt-15 border-t border-[rgba(255,255,255,0.8)]"> <span class="copyright text-sm text-white ">© 2024 KC Hà Tĩnh . All Rights Reserved. Thiết kế web bởi Cánh Cam.</span>
+					<div class="footer-clause flex-y-center gap-x-7.5">
+						<ul class="list-clause text-white flex-y-center gap-x-5">
+							<li class="item text-sm "><a href="#!">Sitemap</a></li>
+							<li class="item text-sm "><a href="#!">Chính sách bảo mật</a></li>
+							<li class="item text-sm "><a href="#!">Điều khoản điều kiện</a></li>
+						</ul>
+						<div class="bocongthuong-logo"> <img class="lozad max-w-full" data-src="./img/bocongthuong-logo.svg" alt=""/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bg-star-left absolute top-0 rem:left-[33px] z-1 rem:w-[calc(211px*var(--size-bg-icon))] rem:h-[calc(120px*var(--size-bg-icon))] bg-[url('../img/bg-icon/footer-star.svg')] bg-no-repeat bg-bottom bg-cover"></div>
+			<div class="footer-bg-star-right absolute top-0 rem:right-[29px] z-1 rem:w-[calc(211px*var(--size-bg-icon))] rem:h-[calc(120px*var(--size-bg-icon))] bg-[url('../img/bg-icon/footer-star.svg')] bg-no-repeat bg-bottom bg-cover"></div>
+			<div class="footer-bg-santa-claus absolute bottom-0 left-0 z-1 rem:w-[calc(274px*var(--size-bg-icon))] rem:h-[calc(282px*var(--size-bg-icon))] bg-[url('../img/bg-icon/footer-bg-santa-claus.svg')] bg-no-repeat bg-bottom bg-cover"></div>
+			<div class="footer-bg-snowman absolute bottom-0 right-0 z-1 rem:w-[calc(237px*var(--size-bg-icon))] rem:h-[calc(211px*var(--size-bg-icon))] bg-[url('../img/bg-icon/footer-bg-snowman.svg')] bg-no-repeat bg-bottom bg-cover"></div>
+		</footer>
+		<script src="./js/core.min.js"></script>
+		<script src="./js/main.min.js"></script>
+	</body>
+</html>

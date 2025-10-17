@@ -1,0 +1,21 @@
+.btn
+    @apply cursor-pointer select-none transition-all duration-300
+    &.loading
+        @apply bg-transparent #{!important}
+        span,.icon
+            @apply opacity-0
+        &::before
+            content: ''
+            animation-duration: 0.5s
+            @apply w-5 h-5 border-3 border-white/40 border-t-white rounded-full inline-block
+            @apply absolute animate-spin
+    &.primary
+        @apply relative inline-flex items-center justify-center py-3.25 px-4.25 rounded-full overflow-hidden text-sm -sm:text-xs uppercase font-bold border border-transparent text-white linear-btn-primary 
+        &:hover::after
+            @apply bg-primary-2
+        &:after
+            @apply content-[''] absolute inset-0 bg-primary-1 z-1 transition-300
+        i
+            @apply text-base text-white relative z-2 transition-300
+        .block-content
+            @apply flex-y-center gap-x-2.75 relative z-2

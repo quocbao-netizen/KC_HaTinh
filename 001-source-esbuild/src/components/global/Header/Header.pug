@@ -1,0 +1,47 @@
+header.header(class="bg-white")
+    .block-header(class="relative overflow-hidden")
+        .container 
+            .header-child(class="lg:grid lg:grid-cols-12 -lg:flex-between gap-base relative z-2")
+                .header-hamburger
+                    span
+                    span
+                    span
+                    #pulseMe
+                        .bar.left
+                        .bar.top
+                        .bar.right
+                        .bar.bottom
+                .header-logo-search(class="col-span-8 -xl:col-span-6 flex-y-center -xl:gap-x-5")
+                    .logo-bg(class="flex gap-x-1 items-end")
+                        .logo 
+                            a(href="#!")
+                                +PugImg("./img/logo.svg")(class="rem:max-w-[124px] -lg:max-w-[95px] h-auto")
+                        .bg-img(class="-xl:hidden")
+                            +PugImg("./img/bg-icon/header-bg-left-2.svg")(class="rem:w-[193px] h-auto")
+                    .header-search(class="grow relative -lg:hidden")
+                        input(type="text", placeholder="Tìm kiếm..." class="rem:h-[48px] w-full p-1 pl-6 rounded-2 border-none outline-none bg-utility-50 placeholder:text-base placeholder:text-utility-500 text-black")
+                        button(class="h-[100%-8px] aspect-1 rounded-2 bg-primary-2 absolute right-[4px] top-[4px] bottom-[4px]")
+                            <i class="fa-regular fa-magnifying-glass text-base text-utility-50"></i>
+                .header-user-action(class="col-span-4 -xl:col-span-6 flex-y-center justify-end rem:gap-x-[21px]")
+                    .header-languge 
+                        +HeaderLanguageHorizontal()
+                    .action-phone(class="flex-y-center gap-x-4 -lg:hidden")
+                        .icon(class="flex-center shrink-0 w-12 h-12 rounded-full border border-primary-4")
+                            <i class="fa-light fa-phone-volume text-2xl text-primary-4"></i>
+                        .content
+                            span.title(class="text-sm text-utility-500") Bạn cần tư vấn?
+                            a.tell(href="#!" class="block text-2xl text-primary-4 font-bold") 1900 80 26 
+                    .block-cart-mobile(class="lg:hidden")
+                        .btn-cart(class="relative w-10 h-10 rounded-full bg-primary-4 flex-center cursor-pointer")
+                            i(class="fa-solid fa-cart-shopping text-xl text-white") 
+                            .count-cart(class="absolute -right-2 -top-2 w-5 h-5 rounded-full flex-center bg-primary-2 text-white rem:text-[14px] font-medium") 0
+        .header-bg-right-1(class="absolute z-1 -xl:hidden top-0 rem:right-[174px] rem:w-[40px] rem:h-[71px] bg-[url('../img/bg-icon/header-bg-right-3.svg')] bg-no-repeat bg-bottom bg-cover")                    
+        .header-bg-right-2(class="absolute z-1 -xl:hidden top-0 rem:right-[39px] rem:w-[67px] rem:h-[63px] bg-[url('../img/bg-icon/header-bg-right-4.svg')] bg-no-repeat bg-bottom bg-cover")                    
+        .header-bg-right-3(class="absolute z-1 -xl:hidden bottom-0 rem:right-[90px] rem:w-[73px] rem:h-[43px] bg-[url('../img/bg-icon/header-bg-right-1.svg')] bg-no-repeat bg-bottom bg-cover")  
+    nav.nav-menu(class="-lg:hidden")
+        .container 
+            +HeaderMenu()
+                      
+
+
+

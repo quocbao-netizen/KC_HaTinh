@@ -1,0 +1,177 @@
+mixin subscribeForm()
+    .subscribe
+        .subscribefrm
+            input.subscribeemail(type="text", placeholder="Nhập email của bạn...")
+            button.subscribebutton Gửi
+mixin PugImg(url="./img/1.jpg")
+    img(data-src=url, alt="", class="lozad " + attributes.class)
+mixin btnViewAll(text="Xem thêm")
+    a(href="" x-link class='btn-primary-2 btn ' + attributes.class)
+        span=text
+        img(src=imgButton, alt="", class="w-5 h-5 svg")
+mixin HeaderLanguageVertical()
+    ul 
+        li.wpml-ls-item
+            a(href="") 
+                span.wpml-ls-native VN
+        ul 
+            li 
+                a(href="") 
+                    span EN
+mixin HeaderLanguageHorizontal()
+    ul 
+        li.wpml-ls-item
+            a(href="") 
+                +PugImg("./img/language/vi.svg")
+                span.wpml-ls-native VN
+        li.wpml-ls-item
+            a(href="") 
+                +PugImg("./img/language/en.svg")
+                span.wpml-ls-native EN
+mixin BtnPrimary(text="")
+    a.btn.primary(href="" class=attributes.class)
+        .block-content
+            span=text
+            i(class="fa-regular fa-arrow-up-right")
+mixin BtnSlide(type="next")
+    button(class="btn w-10 h-10 rounded-full bg-[rgba(0,0,0,0.36)] text-2xl transition-all duration-[0.4s] hover:bg-primary-2 " + attributes.class)
+        if type==="next"
+            i(class="fa-regular fa-angle-right text-white")
+        else if type==="prev"
+            i(class="fa-regular fa-angle-left text-white")
+mixin HeaderMenu()
+    .header-menu(class="flex-between gap-base")
+        .swiper-column-auto(class="w-full")
+            .swiper 
+                ul.swiper-wrapper 
+                    -var menu = ['Giới thiệu','Sản phẩm','Dịch vụ', 'TIN TỨC & SỰ KIỆN','MEDIA & COMMUNICATION','LIÊN HỆ', 'NỘI BỘ']
+                    each item in menu
+                        li.swiper-slide(class="!w-auto !mr-0")
+                            .menu-item-has-children
+                                a(href="#!" class="block border-b-[2px] border-transparent transition-500 hover:border-primary-2")=item
+        .block-cart 
+            .btn-cart(class="relative w-10 h-10 rounded-full bg-primary-4 flex-center cursor-pointer")
+                i(class="fa-solid fa-cart-shopping text-xl text-white") 
+                .count-cart(class="absolute -right-2 -top-2 w-5 h-5 rounded-full flex-center bg-primary-2 text-white rem:text-[14px] font-medium") 0
+mixin HeaderLanguage()
+    .header-language 
+        .header-language-active
+            ul 
+                li.wpml-ls-current-language
+                    a(href="") 
+                        span.wpml-ls-native VN
+                ul 
+                    li 
+                        a(href="") 
+                            span EN
+        .header-language-list
+            ul 
+                li.wpml-ls-current-language
+                    a(href="") 
+                        span.wpml-ls-native VN
+                ul 
+                    li 
+                        a(href="") 
+                            span EN
+mixin MenuSection(arr)
+    .swiper-column-auto(class="relative")
+        .swiper(class="border-b border-utility-200")
+            ul.swiper-wrapper.featured-menu
+                each item, i in arr 
+                    li.item.swiper-slide(class=`!w-auto !mr-0 ${i===0&&"active"}`)
+                        a(href="#!" class="py-1.75 border-b-[2px] border-transparent text-base text-utility-700 font-bold whitespace-nowrap transition-500 select-none hover:border-primary-1 hover:text-primary-1")=item
+        +BtnSlide("next")(class="btn-next absolute top-1/2 z-3 -translate-y-1/2 right-0 w-7.5 h-7.5 !text-xs bg-primary-1")
+mixin ProductItem()
+    .product-item(class="h-full w-full relative bg-white border border-transparent transition-500 group hover:border-primary-2") 
+        .product-tag(class="absolute left-0 top-0 flex flex-col gap-y-2.75 p-5 z-1 items-start")
+            .update(class="py-1.5 px-2 text-sm text-white bg-primary-1") Mới
+            .discount(class="py-1.5 px-2 text-sm text-white bg-primary-2") Giảm 12%
+        .product-thumb 
+            a(href="#!" class="img-ratio") 
+                +PugImg('./img/product/product-1.svg')(class='')
+        .product-info(class="flex flex-col items-start gap-y-3 p-6 pt-5")
+            h3.product-name(class="text-xl text-utility-950 font-bold line-clamp-2 leading-[1.4] transition- group-hover:text-primary-2")
+                a(href="#!") Đạm Vàng Đầu Trâu 
+            .price(class="flex-between w-full")
+                .price-new(class="text-xl text-primary-2") 300.000đ
+                .price-old(class="text-sm text-utility-300 line-through") 500.000đ
+            button.btn-addcart(class="flex-y-center gap-x-2 px-4 py-2.5 text-primary-1 rounded-full border border-primary-1") 
+                span(class="text-sm font-bold") Thêm vào giỏ hàng
+                i(class="fa-regular fa-cart-plus text-lg")
+mixin NewsItem()
+    .news-item(class="bg-utility-50")
+        .news-thumb 
+            a(href="#!" class="img-ratio ratio:pt-[292_440]")
+                +PugImg('./img/news/news-1.svg') 
+        .news-info(class="mt-5")
+            .news-date(class="flex-y-center gap-x-4.75")
+                svg(class="stroke-utility-500 w-3.75 h-3.w-3.75" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg")
+                    path(d="M5 1V2H9V1C9 0.46875 9.4375 0 10 0C10.5312 0 11 0.46875 11 1V2H12.5C13.3125 2 14 2.6875 14 3.5V5H0V3.5C0 2.6875 0.65625 2 1.5 2H3V1C3 0.46875 3.4375 0 4 0C4.53125 0 5 0.46875 5 1ZM0 6H14V14.5C14 15.3438 13.3125 16 12.5 16H1.5C0.65625 16 0 15.3438 0 14.5V6ZM2.5 8C2.21875 8 2 8.25 2 8.5V11.5C2 11.7812 2.21875 12 2.5 12H5.5C5.75 12 6 11.7812 6 11.5V8.5C6 8.25 5.75 8 5.5 8H2.5Z" fill="#818181")
+                span.date-content(class="text-2xl font-bold text-utility-500") 08.08.2024
+            h3.news-name(class="text-2xl font-bold leading-[1.24] line-clamp-2 mt-2") 
+                a(href="#!") Nông sản là gì? Kinh doanh nông sản cần tuân thủ các điều kiện gì? 
+mixin MenuBottomMobile()
+    .menu-mobile(class="fixed bottom-0 left-0 w-full bg-white z-[1004] shadow-[0_2px_10px_10px_rgba(0,0,0,0.05)] lg:hidden")
+        ul.list-menu-mobile-action(class="grid grid-cols-5 text-utility-600")
+            li.item.active
+                a(href="#!" class="flex flex-col gap-y-[2px] items-center w-full p-[10px_5px]")
+                    i(class="fa-regular fa-house text-[16px]")
+                    span.content(class="text-[12px]") Trang chủ
+            li.item.open-hamburger-menu(class="flex flex-col gap-y-[2px] items-center w-full p-[10px_5px]")
+                i(class="fa-regular fa-list text-[16px]")
+                span.content(class="text-[12px]") Danh mục
+            li.item.open-search-mobile(class="flex flex-col gap-y-[2px] items-center w-full p-[10px_5px]")
+                i(class="fa-regular fa-magnifying-glass text-[16px]")
+                span.content(class="text-[12px]") Trang chủ
+            li.item
+                a(href="#!" class="flex flex-col gap-y-[2px] items-center w-full p-[10px_5px]")
+                    i(class="fa-regular fa-headset text-[16px]")
+                    span.content(class="text-[12px]") Trang chủ
+            li.item 
+                a(href="#!" class="flex flex-col gap-y-[2px] items-center w-full p-[10px_5px]")
+                    i(class="fa-regular fa-circle-user text-[16px]")
+                    span.content(class="text-[12px]") Trang chủ
+mixin HamburgerMenu()
+    .hamburger-menu(class="fixed inset-0 z-[1003] bg-white opacity-0 invisible translate-y-[25%] transition-500") 
+        .hamburger-menu-top(class="flex-between pl-[15px] border-b-[2px] border-primary-2 bg-primary-1")
+            .title(class="text-[15px] font-bold uppercase text-white") Danh mục
+            button.close-hamburger-menu(class="w-[40px] h-[40px] bg-[#125937]")
+                i(class="fa-regular fa-xmark text-[18px] text-white")
+        ul.hamburger-list-menu(class="text-utility-900")
+            li.item.active
+                a(href="#!" class="block p-[12.5px_15px] text-sm") Trang chủ 
+            li.item 
+                a(href="#!" class="block p-[12.5px_15px] text-sm") Trang chủ 
+            li.item 
+                a(href="#!" class="block p-[12.5px_15px] text-sm") Trang chủ 
+            li.item 
+                a(href="#!" class="block p-[12.5px_15px] text-sm") Trang chủ 
+            li.item 
+                a(href="#!" class="block p-[12.5px_15px] text-sm") Trang chủ 
+mixin SearchHeader()
+    .header-search-form
+        .close.flex.items-center.justify-center.absolute.top-0.right-0.bg-white.text-3xl.cursor-pointer(class="w-12.5 h-12.5")
+            i.fa-light.fa-xmark
+        .container
+            .wrap-form-search-product
+                .productsearchbox
+                    input(type="text" placeholder="Tìm kiếm")
+                    button
+mixin Tool()
+    ul.list-tool(class="fixed right-10 -lg:right-[12px] bottom-10 -lg:bottom-[calc(56px+12px)] flex flex-col gap-y-1 z-[1000]")
+        li.item.button-to-top(class="flex-center w-11 h-11 -md:w-[32px] -md:h-[32px] rounded-lg bg-primary-2 text-xl -md:text-[14px] text-white cursor-pointer")
+            i(class="fa-regular fa-up-to-line ")
+        li.item(class="text-xl -md:text-[14px] text-white")
+            a(href="#!" class="w-11 h-11 -md:w-[32px] -md:h-[32px] rounded-lg bg-utility-300 flex-center") 
+                i(class="fa-regular fa-phone")
+        li.item(class="text-xl -md:text-[14px] text-white")
+            a(href="#!" class="w-11 h-11 -md:w-[32px] -md:h-[32px] rounded-lg bg-utility-300 flex-center") 
+                i(class="fa-regular fa-pen-to-square")
+        li.item(class="text-xl -md:text-[14px] text-white")
+            a(href="#!" class="w-11 h-11 -md:w-[32px] -md:h-[32px] rounded-lg bg-utility-300 flex-center") 
+                +PugImg('./img/zalo.svg')(class="w-6.5 h-6.5 -md:w-[18px]")
+        li.item(class="text-xl -md:text-[14px] text-white")
+            a(href="#!" class="w-11 h-11 -md:w-[32px] -md:h-[32px] rounded-lg bg-utility-300 flex-center") 
+                +PugImg('./img/mess.svg')(class="w-6.5 h-6.5 -md:w-[18px]")
+
+             
